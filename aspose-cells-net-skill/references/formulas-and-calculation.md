@@ -72,6 +72,25 @@ Avoid volatile functions (`NOW`, `TODAY`, `RAND`, `RANDBETWEEN`, `OFFSET`, `INDI
 `INFO`) where you can: they recompute on every pass and force their dependents to recompute,
 defeating the calculation chain.
 
+### Controlling external link updates on load
+
+Symptom: opening a workbook with external links either blocks waiting for user input, or
+automatically updates links you did not intend to refresh.
+Cause: `Workbook.Settings.UpdateLinksType` controls whether external links are updated
+when the workbook opens. The default is `UserSet` (prompt the user).
+Fix: set the property before or after loading; no `LoadOptions` parameter is needed.
+
+```csharp
+using Aspose.Cells;
+
+var wb = new Workbook("file_with_links.xlsx");
+wb.Settings.UpdateLinksType = UpdateLinksType.Never;      // never update external links
+// wb.Settings.UpdateLinksType = UpdateLinksType.Always;  // always update
+// wb.Settings.UpdateLinksType = UpdateLinksType.UserSet; // prompt user (default)
+```
+
+`UpdateLinksType` enum values: `UserSet` (0), `Never` (1), `Always` (2).
+
 ### Circular references compute to 0
 
 Symptom: intentionally circular formulas (iterative models) all read 0.

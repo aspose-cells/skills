@@ -76,9 +76,27 @@ opts.ignore_error = True
 cell = workbook.worksheets[0].cells.get("B2")
 cell.calculate(opts)   # recompute just B2; dependents not re-walked each call
 ```
-
 Avoid volatile functions (`NOW`, `TODAY`, `RAND`, `RANDBETWEEN`, `OFFSET`, `INDIRECT`,
 `INFO`) where you can: they recompute on every pass and force their dependents to recompute.
+
+### Controlling external link updates on load
+
+Symptom: opening a workbook with external links either blocks waiting for user input, or
+automatically updates links you did not intend to refresh.
+Cause: `Workbook.settings.update_links_type` controls whether external links are updated
+when the workbook opens. The default is `USER_SET` (prompt the user).
+Fix: set the property before or after loading; no `LoadOptions` parameter is needed.
+
+```python
+import aspose.cells as gc
+
+wb = gc.Workbook("file_with_links.xlsx")
+wb.settings.update_links_type = gc.UpdateLinksType.NEVER   # never update external links
+# wb.settings.update_links_type = gc.UpdateLinksType.ALWAYS  # always update
+# wb.settings.update_links_type = gc.UpdateLinksType.USER_SET  # prompt user (default)
+```
+
+`UpdateLinksType` enum values: `USER_SET` (0), `NEVER` (1), `ALWAYS` (2).
 
 ### Circular references compute to 0
 
