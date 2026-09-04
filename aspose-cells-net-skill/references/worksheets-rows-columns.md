@@ -156,12 +156,17 @@ Workbook-vs-worksheet-scoped defined names and the `Names` collection -> formula
 `Worksheet.ListObjects.Add(startRow, startCol, endRow, endCol, hasHeaders)` returns the new table's index; index into `ListObjects` to configure it.
 
 ```csharp
-Workbook wb = new Workbook("input.xlsx");
+using Aspose.Cells;
+using Aspose.Cells.Tables;
+Workbook wb = new Workbook();
 Worksheet sheet = wb.Worksheets[0];
-int idx = sheet.ListObjects.Add(0, 0, 9, 3, true);   // A1:D10, first row = header
+int idx = sheet.ListObjects.Add(0, 0, 9, 3, true);
 ListObject table = sheet.ListObjects[idx];
-table.TableStyleType = TableStyleType.TableStyleMedium9;
+table.DisplayName = "SalesQ3";
 table.ShowTotals = true;
+table.ListColumns[3].TotalsCalculation = TotalsCalculation.Sum;
+System.Diagnostics.Debug.Assert(table.DisplayName == "SalesQ3");
+System.Diagnostics.Debug.Assert(table.ShowTotals == true);
 wb.Save("output.xlsx");
 ```
 

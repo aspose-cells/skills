@@ -44,32 +44,6 @@ designer.process()
 designer.workbook.save("out.xlsx", gc.SaveFormat.XLSX)
 ```
 
-## Class / object markers from a DataTable
-
-`&=Source.Field` expands one row per source record, copying the marker cell's style down. Build a `System.Data.DataTable` and register it by the `Source` name.
-
-```python
-import aspose.cells as gc
-
-designer_book = gc.Workbook("template.xlsx")   # B2 contains &=Customer (array marker)
-designer = gc.WorkbookDesigner(designer_book)
-
-# Array-style markers accept a plain 2D Python list as the data source (no pythonnet
-# needed). For field-style markers (&=Customer.City / &=Customer.Revenue) you need a
-# System.Data.DataTable, which requires the pythonnet package (`import System` available):
-#   import System.Data as sd
-#   dt = sd.DataTable("Customer")
-#   dt.Columns.Add("City", sd.String); dt.Columns.Add("Revenue", sd.Double)
-#   dt.Rows.Add(["NYC", 5000.0]); dt.Rows.Add(["LA", 3000.0])
-#   designer.set_data_source("Customer", dt)
-designer.set_data_source("Customer", [["NYC", 5000.0], ["LA", 3000.0]])
-designer.process()
-designer.workbook.calculate_formula()       # recompute any totals over the expanded rows
-designer.workbook.save("report.xlsx", gc.SaveFormat.XLSX)
-```
-
-To bind a list of plain Python objects instead of a DataTable, register each via `set_data_source` against an `ICellsDataTable` implementation; `System.Data.DataTable` is the lowest-friction option when the .NET `System.Data` assembly is available.
-
 ## Common marker modifiers
 
 Append inside the parentheses after the field:

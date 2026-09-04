@@ -175,15 +175,16 @@ Workbook-vs-worksheet-scoped defined names and the `names` collection -> formula
 `Worksheet.list_objects.add(start_row, start_col, end_row, end_col, has_headers)` returns the new table's index; index into `list_objects` to configure it.
 
 ```python
-import aspose.cells as gc
 
-wb = gc.Workbook("input.xlsx")
+import aspose.cells as cells
+from aspose.cells.tables import TotalsCalculation
+wb = cells.Workbook()
 sheet = wb.worksheets[0]
-idx = sheet.list_objects.add(0, 0, 9, 3, True)   # A1:D10, first row = header
+idx = sheet.list_objects.add(0, 0, 9, 3, True)
 table = sheet.list_objects[idx]
-table.table_style_type = gc.tables.TableStyleType.TABLE_STYLE_MEDIUM9
+table.display_name = "SalesQ3"
 table.show_totals = True
-wb.save("output.xlsx")
+table.list_columns[3].totals_calculation = TotalsCalculation.SUM
 ```
 
 Convert a table back to plain cells with `table.convert_to_range()` (formatting is kept, but table behavior and structured references are dropped).
