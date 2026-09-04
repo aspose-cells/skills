@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "name": "aspose-cells-java",
+  "language": "java",
+  "package": "com.aspose.cells",
+  "entry": "SKILL.md",
+  "shared": [
+    "_shared/imports.md",
+    "_shared/license.md",
+    "_shared/fonts-linux-docker.md",
+    "_shared/large-files-memory.md"
+  ],
+  "categories": {
+    "getting-started": [
+      "maven-gradle-dependencies",
+      "setup-and-licensing",
+      "create-workbook",
+      "open-file",
+      "save-export",
+      "detect-format",
+      "workbook-settings"
+    ],
+    "cells": [
+      "read-write-values",
+      "cell-formatting-styles",
+      "conditional-formatting",
+      "rows-columns-operations",
+      "merge-unmerge-cells",
+      "sort-data",
+      "auto-filter",
+      "data-validation",
+      "find-search-replace",
+      "smart-markers-reporting"
+    ],
+    "formulas": [
+      "set-get-formula",
+      "calculate-formulas",
+      "array-r1c1-formula",
+      "named-ranges"
+    ],
+    "worksheet": [
+      "manage-worksheets",
+      "page-setup-print",
+      "panes-zoom-views"
+    ],
+    "charts": [
+      "create-chart",
+      "chart-types-selection",
+      "chart-data-formatting",
+      "chart-to-image-pdf"
+    ],
+    "pivot-tables": [
+      "create-pivot-table",
+      "pivot-fields-formatting",
+      "refresh-pivot-table"
+    ],
+    "rendering": [
+      "convert-to-pdf",
+      "worksheet-image",
+      "convert-html",
+      "csv-json-txt-export"
+    ],
+    "tables": [
+      "list-object-tables"
+    ],
+    "images-shapes": [
+      "insert-image",
+      "shapes-textboxes",
+      "ole-objects"
+    ],
+    "security": [
+      "encryption-decryption",
+      "digital-signature",
+      "document-properties"
+    ],
+    "macros": [
+      "vba-macros"
+    ],
+    "slicers-sparklines": [
+      "slicers",
+      "sparklines"
+    ]
+  }
+}

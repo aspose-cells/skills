@@ -6,6 +6,7 @@ A collection of self-verifying SKILLs for working with Aspose.Cells in coding ag
 
 | Skill | Description |
 |-------|-------------|
+| [aspose-cells-java-skill](aspose-cells-java-skill/) | Java — create, read, edit, convert, and render spreadsheets with Aspose.Cells for Java |
 | [aspose-cells-net-skill](aspose-cells-net-skill/) | C#/.NET — create, read, edit, convert, and render spreadsheets |
 | [aspose-cells-python-via-net-skill](aspose-cells-python-via-net-skill/) | Python via .NET — same capabilities with the `aspose-cells-python` package |
 
