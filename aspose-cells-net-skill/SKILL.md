@@ -115,6 +115,44 @@ the verifier before trusting a code snippet here.
 | Interactive filters (slicers) over pivots/tables; mini sparkline charts                          | `references/slicers-and-sparklines.md` |
 | Embed another file (Word/PDF/Excel/image) inside a worksheet cell                                | `references/ole-objects.md` |
 
+## Required `using` directives
+When generating C# code, the agent must include all `using` directives the snippet needs. The table below maps commonly used types/enums to their namespace. The agent should auto-inject the correct `using` statements based on the types used.
+
+| `using`                          | Types / Enums                                                                                                                                                                                                                                                    |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Aspose.Cells`                   | Workbook, Worksheet, Cells, Cell, Range, Style, StyleFlag, CellsColor, SaveFormat, MemorySetting, Validation, ValidationType, AutoFilter, DataSorter, Name, Comment, ThreadedComment, WorkbookDesigner, OleObject, IWarningCallback, WarningType, PdfSaveOptions |
+| `Aspose.Cells.Charts`            | Chart, ChartType, Series, Sparkline, SparklineType                                                                                                                                                                                                               |
+| `Aspose.Cells.Pivot`             | PivotTable, PivotField, PivotCache, PivotTableCalculateOption                                                                                                                                                                                                    |
+| `Aspose.Cells.Drawing`           | Picture, Shape, RectangleShape, ImageType                                                                                                                                                                                                                        |
+| `Aspose.Cells.DigitalSignatures` | DigitalSignature, DigitalSignatureCollection                                                                                                                                                                                                                     |
+| `Aspose.Cells.Vba`               | VbaProject, VbaModule, VbaModuleType                                                                                                                                                                                                                             |
+| `Aspose.Cells.Slicers`           | Slicer, SlicerStyleType                                                                                                                                                                                                                                          |
+| `Aspose.Cells.Rendering`         | ImageOrPrintOptions, SheetRender, WorkbookRender                                                                                                                                                                                                                 |
+
+### Namespace resolution rules
+
+When generating C# code, the agent must follow these rules:
+
+1. **Include all required `using` directives.**
+   Every namespace required by the generated code must be included.
+2. **Resolve namespaces from the pinned Aspose.Cells package version.**
+   The agent must use the API namespace corresponding to the pinned Aspose.Cells package version used by this Skill.
+3. **Do not guess namespaces from type names.**
+   A type name alone must not be used to infer its namespace.
+4. **Prefer the namespace mapping in this document.**
+   If a type is listed in the table above, use the corresponding namespace unless the pinned package version confirms a different namespace.
+5. **Verify unlisted types when necessary.**
+   If a type is not listed in this table, consult the API reference or the metadata/reflection information from the pinned Aspose.Cells package before generating the code.
+6. **Include only required `using` directives.**
+   Do not add namespaces merely because they appear in this table. A `using` directive should be included only when the generated code actually uses a type from that namespace.
+7. **Support multiple namespaces in one snippet.**
+   If the generated code uses types from multiple namespaces, include all required `using` directives.
+8. **Do not rely on fully qualified type names as a substitute.**
+   Unless there is a naming conflict, prefer the appropriate `using` directive and the normal type name.
+9. **Resolve naming conflicts explicitly.**
+   If two imported namespaces contain types with the same name, use an appropriate alias or a fully qualified type name to avoid ambiguity.
+10. **Keep generated code compilable.**
+    The final generated snippet should compile against the pinned Aspose.Cells package without requiring the user to manually add missing `using` directives.
 ## Cheat sheet
 
 A fast index of the most-reached-for calls. Each row resolves to one line in the
