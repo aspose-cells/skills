@@ -123,6 +123,57 @@ If you pin a different version, re-run an introspection check before trusting a 
 | Interactive filters (slicers) over pivots/tables; mini sparkline charts                          | `references/slicers-and-sparklines.md` |
 | Embed another file (Word/PDF/Excel/image) inside a worksheet cell                                | `references/ole-objects.md` |
 
+## Required imports
+
+When generating Python code, the agent must include all imports required by the snippet. The table below maps commonly used Aspose.Cells types and enums to their Python modules. The agent should automatically add the correct imports based on the types used.
+
+| Import                            | Types / Enums                                                                                                                                                                                                                                                    |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `aspose.cells`                    | Workbook, Worksheet, Cells, Cell, Range, Style, StyleFlag, CellsColor, SaveFormat, MemorySetting, Validation, ValidationType, AutoFilter, DataSorter, Name, Comment, ThreadedComment, WorkbookDesigner, OleObject, IWarningCallback, WarningType, PdfSaveOptions |
+| `aspose.cells.charts`             | Chart, ChartType, Series, Sparkline, SparklineType                                                                                                                                                                                                               |
+| `aspose.cells.pivot`              | PivotTable, PivotField, PivotCache, PivotTableCalculateOption                                                                                                                                                                                                    |
+| `aspose.cells.drawing`            | Picture, Shape, RectangleShape, ImageType                                                                                                                                                                                                                        |
+| `aspose.cells.digital_signatures` | DigitalSignature, DigitalSignatureCollection                                                                                                                                                                                                                     |
+| `aspose.cells.vba`                | VbaProject, VbaModule, VbaModuleType                                                                                                                                                                                                                             |
+| `aspose.cells.slicers`            | Slicer, SlicerStyleType                                                                                                                                                                                                                                          |
+| `aspose.cells.rendering`          | ImageOrPrintOptions, SheetRender, WorkbookRender                                                                                                                                                                                                                 |
+
+### Import resolution rules
+
+When generating Python code, the agent must follow these rules:
+
+1. **Include all required imports.**
+   Every module required by the generated code must be imported.
+2. **Resolve modules from the pinned Aspose.Cells for Python via .NET package version.**
+   The agent must use the Python module corresponding to the pinned `aspose-cells-python` package version used by this Skill.
+3. **Do not guess modules from type names.**
+   A type name alone must not be used to infer its Python module.
+4. **Prefer the import mapping in this document.**
+   If a type is listed in the table above, use the corresponding Python module unless the pinned package version confirms a different module.
+5. **Verify unlisted types when necessary.**
+   If a type is not listed in this table, consult the Python API reference or the metadata/reflection information from the pinned Aspose.Cells package before generating the code.
+6. **Include only required imports.**
+   Do not import modules merely because they appear in this table. An import should be included only when the generated code actually uses a type from that module.
+7. **Support multiple modules in one snippet.**
+   If the generated code uses types from multiple modules, include all required imports.
+8. **Prefer direct imports when appropriate.**
+   For example:
+   ```python
+   from aspose.cells import Workbook
+   ```
+   rather than importing the entire module when only a small number of types are required.
+9. **Use module-qualified names when appropriate.**
+   For example:
+   ```python
+   import aspose.cells as cells
+   workbook = cells.Workbook()
+   ```
+   This style is acceptable when multiple types from the same module are used or when it improves clarity.
+10. **Resolve naming conflicts explicitly.**
+    If two imported modules contain types with the same name, use an appropriate import alias or a module-qualified name to avoid ambiguity.
+11. **Keep generated code executable.**
+    The final generated snippet should run against the pinned `aspose-cells-python` package without requiring the user to manually add missing imports.
+
 ## Cheat sheet
 
 A fast index of the most-reached-for calls. Each row resolves to one line in the
