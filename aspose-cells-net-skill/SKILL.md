@@ -87,7 +87,7 @@ workbook.Save("output.xlsx", SaveFormat.Xlsx);
 
 ## Version assumptions
 
-Written for **Aspose.Cells for .NET 26.7.0** on .NET 8+, and every API shown in
+Written for **Aspose.Cells for .NET 26.10.0** on .NET 8+, and every API shown in
 SKILL.md and `references/` is verified by reflection against that exact package (see
 "Verifying the docs" below). Graphics: `System.Drawing.Common` on Windows-targeted
 builds; SkiaSharp on cross-platform .NET 6+ builds since 22.10.1. API surface follows
@@ -201,7 +201,7 @@ both run against the pinned Aspose.Cells package; exit code 0 means clean.
 dotnet run --project verifier/AsposeCellsVerifier.csproj -c Release -- --compile
 
 # 2) Reflection scan of inline references (checks that every type/member
-#    named in prose and tables actually exists in 26.7).
+#    named in prose and tables actually exists in 26.10).
 dotnet run --project verifier/AsposeCellsVerifier.csproj -c Release
 ```
 

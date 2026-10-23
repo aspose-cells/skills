@@ -54,7 +54,7 @@ gc.License().set_license("Aspose.Cells.lic")
 
 ## Verifying the license loaded
 
-`Workbook.is_licensed` is `False` before a license is applied and `True` after a successful `set_license` - assert it in a smoke test. A missing license file makes `set_license` throw `FileNotFoundError` ("Cannot find license"); a corrupt or modified file throws `IOError` ("Corrupted License file.") - verified against 26.7.0. Do not swallow either.
+`Workbook.is_licensed` is `False` before a license is applied and `True` after a successful `set_license` - assert it in a smoke test. A missing license file makes `set_license` throw `FileNotFoundError` ("Cannot find license"); a corrupt or modified file throws `IOError` ("Corrupted License file.") - verified against 26.10.0. Do not swallow either.
 
 ```python
 import aspose.cells as gc
