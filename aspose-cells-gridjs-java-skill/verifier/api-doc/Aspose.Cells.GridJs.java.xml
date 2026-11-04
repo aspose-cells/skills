@@ -1,0 +1,2482 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>com.aspose.gridjs</name>
+    <version>26.10</version>
+    <type>jar</type>
+  </assembly>
+  <members>
+    <member name="T:com.aspose.gridjs.CoWorkOperationType">
+      <summary>Represents the CoWorkOperationType class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.CoWorkOperationType {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.VIEW">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.LOAD">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.LOAD_SHEET">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.GET_IMAGE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.GET_OLE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.EDIT">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.UPDATE_CELL">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.ADD_IMAGE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.COPY_IMAGE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.INSERT_ROW">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.DELETE_ROW">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.INSERT_COLUMN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.DELETE_COLUMN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.DOWNLOAD">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.ADMIN_CONFIG">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkOperationType.USER_MANAGEMENT">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.CoWorkUserPermission">
+      <summary>Represents the CoWorkUserPermission class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.CoWorkUserPermission {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkUserPermission.READ_ONLY">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkUserPermission.EDITABLE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkUserPermission.DOWNLOAD">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.CoWorkUserPermission.ADMIN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.CoWorkUserProvider">
+      <summary>Represents the CoWorkUserProvider interface shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>interface</kind>
+      <header>public interface com.aspose.gridjs.CoWorkUserProvider {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.CoWorkUserProvider.getCurrentUserName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.CoWorkUserProvider.getCurrentUserId()">
+      <returns type="long"></returns>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.CoWorkUserProvider.getPermission()">
+      <returns type="int"></returns>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.Config">
+      <summary>Represents the Config class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.Config {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.Config.RedactionUseClientGenerateId">
+      <type>boolean</type>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.Config()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getSaveHtmlAsZip()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setSaveHtmlAsZip(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getSkipInvisibleShapes()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setSkipInvisibleShapes(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getLazyLoading()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setLazyLoading(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getSameImageDetecting()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setSameImageDetecting(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getAutoOptimizeForLargeCells()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setAutoOptimizeForLargeCells(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getIslimitShapeOrImage()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setIslimitShapeOrImage(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getMaxShapeOrImageCount()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setMaxShapeOrImageCount(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getMaxTotalShapeOrImageCount()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setMaxTotalShapeOrImageCount(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getMaxShapeOrImageWidthOrHeight()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setMaxShapeOrImageWidthOrHeight(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getMaxPdfSaveSeconds()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setMaxPdfSaveSeconds(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getIgnoreEmptyContent()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setIgnoreEmptyContent(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getUsePrintArea()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setUsePrintArea(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.isCollaborative()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setCollaborative(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getEnableChartClientRendering()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setEnableChartClientRendering(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getCustomPdfSaveOptions()">
+      <returns type="com.aspose.cells.PdfSaveOptions"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setCustomPdfSaveOptions(com.aspose.cells.PdfSaveOptions)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.PdfSaveOptions"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getShowChartSheet()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setShowChartSheet(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getEmptySheetMaxRow()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setEmptySheetMaxRow(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getEmptySheetMaxCol()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setEmptySheetMaxCol(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getPictureCacheDirectory()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setPictureCacheDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getFileCacheDirectory()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setFileCacheDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getBaseRouteName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setBaseRouteName(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getMessageTopic()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setMessageTopic(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setFontFolder(java.lang.String,boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setFontFolders(java.lang.String[],boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String[]"></param>
+      <param name="p1" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getAutoFitRowsHeightOnLoad()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setAutoFitRowsHeightOnLoad(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getAutoFitColumnsOnLoad()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setAutoFitColumnsOnLoad(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.getJsonCache()">
+      <returns type="com.aspose.gridjs.y_"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.Config.setJsonCache(com.aspose.gridjs.y_)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.y_"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridAbstractCalculationEngine">
+      <summary>Represents the GridAbstractCalculationEngine class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public abstract class com.aspose.gridjs.GridAbstractCalculationEngine {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridAbstractCalculationEngine.GridAbstractCalculationEngine()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridAbstractCalculationEngine.calculate(com.aspose.gridjs.GridCalculationData)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.GridCalculationData"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridCacheForStream">
+      <summary>Abstract class for custom cache implementations. Extend this to provide custom caching logic for GridJs files.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public abstract class com.aspose.gridjs.GridCacheForStream {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCacheForStream.GridCacheForStream()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCacheForStream.saveStream(java.io.InputStream,java.lang.String)">
+      <summary>Saves a stream to cache.</summary>
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.InputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCacheForStream.loadStream(java.lang.String)">
+      <summary>Loads a stream from cache.</summary>
+      <returns type="java.io.InputStream"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCacheForStream.isExisted(java.lang.String)">
+      <summary>Checks if a cache entry exists.</summary>
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCacheForStream.getFileUrl(java.lang.String)">
+      <summary>Gets the URL for a cached file.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridCalculationData">
+      <summary>Represents the GridCalculationData class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridCalculationData {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getCalculatedValue()">
+      <returns type="java.lang.Object"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.setCalculatedValue(java.lang.Object)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.Object"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getRow()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getColumn()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getStringValue()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getValue()">
+      <returns type="java.lang.Object"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getFormula()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getSheetName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getFunctionName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getParamCount()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getParamValue(int)">
+      <returns type="java.lang.Object"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCalculationData.getParamText(int)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridCellException">
+      <summary>Represents the GridCellException class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridCellException extends java.lang.IllegalStateException {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCellException.getCode()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCellException.getMessage()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridCellException.toString()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridExceptionType">
+      <summary>Represents the GridExceptionType class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.GridExceptionType {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.CHART">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.DATA_TYPE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.DATA_VALIDATION">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.CONDITIONAL_FORMATTING">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.FILE_FORMAT">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.FORMULA">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.INVALID_DATA">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.INVALID_OPERATOR">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.INCORRECT_PASSWORD">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.LICENSE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.LIMITATION">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.PAGE_SETUP">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.PIVOT_TABLE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.SHAPE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.SPARKLINE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.SHEET_NAME">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.SHEET_TYPE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.INTERRUPTED">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.IO">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.PERMISSION">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.UNSUPPORTED_FEATURE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.UNSUPPORTED_STREAM">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridExceptionType.UNDISCLOSED_INFORMATION">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridInterruptMonitor">
+      <summary>Represents the GridInterruptMonitor class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridInterruptMonitor {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridInterruptMonitor.GridInterruptMonitor()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridInterruptMonitor.interrupt()">
+      <returns type="void"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsCoService">
+      <summary>Service for collaborative editing operations.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsCoService {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsCoService.GridJsCoService(com.aspose.gridjs.CoWorkUserProvider)">
+      <param name="p0" type="com.aspose.gridjs.CoWorkUserProvider"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsCoService.checkAndSyncForCollaborative(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsCoService.getFileHistory(java.lang.String,int)">
+      <returns type="java.util.List&lt;com.aspose.gridjs.OprMessage&gt;"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsCoService.handleMessage(java.lang.String,com.aspose.gridjs.OprMessageDto)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="com.aspose.gridjs.OprMessageDto"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsControllerBase">
+      <summary>Base controller class for GridJs operations. Provides built-in endpoints for cell updates, image handling, OLE objects, file downloads, and more. For Spring Boot 2.x with javax.servlet. For Spring Boot 3.x, use GridJsJakartaControllerBase.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public abstract class com.aspose.gridjs.GridJsControllerBase {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.GridJsControllerBase(com.aspose.gridjs.IGridJsService)">
+      <summary>Constructor that accepts the GridJs service.</summary>
+      <param name="gridJsService" type="com.aspose.gridjs.IGridJsService">The GridJs service instance.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.lazyLoadingStreamJson(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)">
+      <summary>Handles lazy loading stream JSON.</summary>
+      <returns type="void"></returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="sheetName" type="java.lang.String">Sheet name.</param>
+      <param name="response" type="javax.servlet.http.HttpServletResponse">HTTP servlet response.</param>
+      <throws type="java.io.IOException"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.updateCell(javax.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to update a cell value. Route: /UpdateCell</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with JSON result.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.addImage(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String)">
+      <summary>POST endpoint to add an image. Route: /AddImage</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with JSON result.</returns>
+      <param name="file" type="org.springframework.web.multipart.MultipartFile">Multipart file upload.</param>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="p" type="java.lang.String">Position data.</param>
+      <param name="isControl" type="java.lang.String">Control flag.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.copyImage(javax.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to copy an image. Route: /CopyImage</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with JSON result.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.addImageByUrl(javax.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to add an image by URL. Route: /AddImageByURL</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with JSON result.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.getImage(javax.servlet.http.HttpServletRequest)">
+      <summary>GET endpoint to retrieve an image. Route: /Image</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;org.springframework.core.io.InputStreamResource&gt;">Response entity with input stream resource.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.getImageUrl(java.lang.String,java.lang.String)">
+      <summary>GET endpoint to get image URL. Route: /ImageUrl</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with image URL.</returns>
+      <param name="id" type="java.lang.String">Image ID.</param>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.getOle(javax.servlet.http.HttpServletRequest)">
+      <summary>GET endpoint to retrieve OLE object. Route: /Ole</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;?&gt;">Response entity with OLE data.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.getFile(java.lang.String)">
+      <summary>GET endpoint to get a file. Route: /GetFile</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;?&gt;">Response entity with file data.</returns>
+      <param name="id" type="java.lang.String">File ID.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsControllerBase.download(javax.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to download file. Route: /Download</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;">Response entity with download data.</returns>
+      <param name="request" type="javax.servlet.http.HttpServletRequest">HTTP servlet request.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsJakartaControllerBase">
+      <summary>Base controller class for GridJs operations with Jakarta EE support. For Spring Boot 3.x with jakarta.servlet. For Spring Boot 2.x, use GridJsControllerBase.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public abstract class com.aspose.gridjs.GridJsJakartaControllerBase {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.GridJsJakartaControllerBase(com.aspose.gridjs.IGridJsService)">
+      <summary>Constructor that accepts the GridJs service.</summary>
+      <param name="gridJsService" type="com.aspose.gridjs.IGridJsService">The GridJs service instance.</param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.lazyLoadingStreamJson(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="jakarta.servlet.http.HttpServletResponse"></param>
+      <throws type="java.io.IOException"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.updateCell(jakarta.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to update a cell value. Route: /UpdateCell</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.addImage(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String)">
+      <summary>POST endpoint to add an image. Route: /AddImage</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="org.springframework.web.multipart.MultipartFile"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.copyImage(jakarta.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to copy an image. Route: /CopyImage</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.addImageByUrl(jakarta.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to add an image by URL. Route: /AddImageByURL</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.getImage(jakarta.servlet.http.HttpServletRequest)">
+      <summary>GET endpoint to retrieve an image. Route: /Image</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;org.springframework.core.io.InputStreamResource&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.getImageUrl(java.lang.String,java.lang.String)">
+      <summary>GET endpoint to get image URL. Route: /ImageUrl</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.getOle(jakarta.servlet.http.HttpServletRequest)">
+      <summary>GET endpoint to retrieve OLE object. Route: /Ole</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;?&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.getFile(java.lang.String)">
+      <summary>GET endpoint to get a file. Route: /GetFile</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;?&gt;"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsJakartaControllerBase.download(jakarta.servlet.http.HttpServletRequest)">
+      <summary>POST endpoint to download file. Route: /Download</summary>
+      <returns type="org.springframework.http.ResponseEntity&lt;java.lang.String&gt;"></returns>
+      <param name="p0" type="jakarta.servlet.http.HttpServletRequest"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsLogLevel">
+      <summary>Log levels for GridJs logging.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.GridJsLogLevel {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogLevel.DEBUG">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogLevel.INFO">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogLevel.WARN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogLevel.ERROR">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogLevel.NONE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsLogRolling">
+      <summary>Log rolling configuration.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.GridJsLogRolling {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogRolling.NONE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogRolling.DAILY">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsLogRolling.MONTHLY">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsLogger">
+      <summary>Logger for GridJs operations.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsLogger {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.GridJsLogger()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.getLevel()">
+      <returns type="int"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLevel(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.getEnableConsoleOutput()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setEnableConsoleOutput(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.getEnableFileOutput()">
+      <returns type="boolean"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setEnableFileOutput(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.getLogFilePath()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.getMaxFileSize()">
+      <returns type="long"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setMaxFileSize(long)">
+      <returns type="void"></returns>
+      <param name="p0" type="long"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLogFile(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLogFile(java.lang.String,boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="boolean"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLogDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLogDirectory(java.lang.String,int)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="int"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.setLogDirectory(java.lang.String,int,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="int"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.closeLogFile()">
+      <returns type="void"></returns>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.debug(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.info(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.warn(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.error(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsLogger.log(int,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsOptions">
+      <summary>Configuration options for GridJs. Contains settings for caching, lazy loading, image handling, and other GridJs behaviors.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsOptions {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsOptions.CacheImp">
+      <type>com.aspose.gridjs.GridCacheForStream</type>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsOptions.RedactionUseClientGenerateId">
+      <type>boolean</type>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.GridJsOptions()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getSaveHtmlAsZip()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setSaveHtmlAsZip(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getSkipInvisibleShapes()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setSkipInvisibleShapes(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getLazyLoading()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setLazyLoading(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getSameImageDetecting()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setSameImageDetecting(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getAutoOptimizeForLargeCells()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setAutoOptimizeForLargeCells(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getIslimitShapeOrImage()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setIslimitShapeOrImage(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getMaxShapeOrImageCount()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setMaxShapeOrImageCount(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getMaxTotalShapeOrImageCount()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setMaxTotalShapeOrImageCount(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getMaxShapeOrImageWidthOrHeight()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setMaxShapeOrImageWidthOrHeight(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getMaxPdfSaveSeconds()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setMaxPdfSaveSeconds(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getIgnoreEmptyContent()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setIgnoreEmptyContent(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getUsePrintArea()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setUsePrintArea(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.isCollaborative()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setCollaborative(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getEnableChartClientRendering()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setEnableChartClientRendering(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getCustomPdfSaveOptions()">
+      <returns type="com.aspose.cells.PdfSaveOptions"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setCustomPdfSaveOptions(com.aspose.cells.PdfSaveOptions)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.PdfSaveOptions"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getShowChartSheet()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setShowChartSheet(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getEmptySheetMaxRow()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setEmptySheetMaxRow(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getEmptySheetMaxCol()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setEmptySheetMaxCol(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getPictureCacheDirectory()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setPictureCacheDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getFileCacheDirectory()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setFileCacheDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getFontFolders()">
+      <returns type="java.lang.String[]"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setFontFolders(java.lang.String[])">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String[]"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getBaseRouteName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setBaseRouteName(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getMessageTopic()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setMessageTopic(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getAutoFitRowsHeightOnLoad()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setAutoFitRowsHeightOnLoad(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getAutoFitColumnsOnLoad()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setAutoFitColumnsOnLoad(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.getJsonCache()">
+      <returns type="com.aspose.gridjs.y_"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsOptions.setJsonCache(com.aspose.gridjs.y_)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.y_"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsPermissionException">
+      <summary>Represents the GridJsPermissionException class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsPermissionException extends java.lang.Exception {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsPermissionException.GridJsPermissionException(java.lang.String,int,int)">
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="int"></param>
+      <param name="p2" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsPermissionException.GridJsPermissionException(java.lang.String,java.lang.String,int,int)">
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="int"></param>
+      <param name="p3" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsPermissionException.getRequiredPermission()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsPermissionException.getCurrentPermission()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsPermissionException.getOperation()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsService">
+      <summary>Default implementation of IGridJsService. Handles all GridJs operations including workbook loading, cell updates, image management, and file operations.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsService implements com.aspose.gridjs.IGridJsService {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.getWarningCallback()">
+      <returns type="com.aspose.cells.IWarningCallback"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.setWarningCallback(com.aspose.cells.IWarningCallback)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.IWarningCallback"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.GridJsService(com.aspose.gridjs.GridJsOptions)">
+      <summary>Creates a new GridJsService with the specified options.</summary>
+      <param name="options" type="com.aspose.gridjs.GridJsOptions">GridJs configuration options.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.checkInCacheForCollaborative(java.lang.String)">
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.clearJsonCacheForUid(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.clearAllJsonCache()">
+      <returns type="void"></returns>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.getSettings()">
+      <returns type="com.aspose.gridjs.GridWorkbookSettings"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.setSettings(com.aspose.gridjs.GridWorkbookSettings)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.GridWorkbookSettings"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.updateCell(java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailFileJsonWithUid(java.lang.String,java.lang.String)">
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailFileJsonWithUid(com.aspose.cells.Workbook,java.lang.String,java.lang.String)">
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="com.aspose.cells.Workbook"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailStreamJsonWithUid(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailStreamJsonWithUid(java.io.OutputStream,com.aspose.cells.Workbook,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="com.aspose.cells.Workbook"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailStreamJson(java.io.OutputStream,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.detailStreamJson(java.io.OutputStream,com.aspose.cells.Workbook,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="com.aspose.cells.Workbook"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.lazyLoadingJson(java.lang.String,java.lang.String)">
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.lazyLoadingStreamJson(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.addImage(java.lang.String,java.lang.String,java.io.InputStream)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.io.InputStream"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.addImageByURL(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.io.InputStream"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.copyImage(java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.load(java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.image(java.lang.String,java.lang.String)">
+      <returns type="java.io.InputStream"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.ole(java.lang.String,java.lang.String,int,java.lang.String[])">
+      <returns type="byte[]"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="int"></param>
+      <param name="p3" type="java.lang.String[]"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.imageUrl(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.getFile(java.lang.String)">
+      <returns type="java.io.InputStream"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.translateSheetAsync(java.lang.String,java.lang.String,com.aspose.gridjs.ITextTranslator,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="com.aspose.gridjs.ITextTranslator"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.download(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.dispose()">
+      <returns type="void"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsService.destroy()">
+      <returns type="void"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridJsWorkbook">
+      <summary>Represents a workbook for GridJs operations. Provides methods for importing/exporting Excel files, managing images, and handling cell updates.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridJsWorkbook {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsWorkbook.CacheImp">
+      <type>com.aspose.gridjs.GridCacheForStream</type>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsWorkbook.CalculateEngine">
+      <type>com.aspose.gridjs.GridAbstractCalculationEngine</type>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsWorkbook.UpdateMonitor">
+      <type>com.aspose.gridjs.GridUpdateMonitor</type>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridJsWorkbook.PICTURE_TYPE">
+      <type>java.lang.String</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.GridJsWorkbook()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getSettings()">
+      <returns type="com.aspose.gridjs.GridWorkbookSettings"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setSettings(com.aspose.gridjs.GridWorkbookSettings)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.GridWorkbookSettings"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getWarningCallback()">
+      <returns type="com.aspose.cells.IWarningCallback"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setWarningCallback(com.aspose.cells.IWarningCallback)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.IWarningCallback"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setInterruptMonitorForLoad(com.aspose.gridjs.GridInterruptMonitor,int)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.GridInterruptMonitor"></param>
+      <param name="p1" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setInterruptMonitorForSave(com.aspose.gridjs.GridInterruptMonitor)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.gridjs.GridInterruptMonitor"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getJsonByUid(java.lang.String,java.lang.String)">
+      <summary>Gets JSON by unique identifier.</summary>
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.jsonToStreamByUid(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.jsonToStream(java.io.OutputStream,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.jsonToStream(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.lazyLoadingStream(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.lazyLoadingJson(java.lang.String,java.lang.String)">
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String)">
+      <summary>Imports an Excel file from path.</summary>
+      <returns type="void"></returns>
+      <param name="filePath" type="java.lang.String">Path to the Excel file.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(com.aspose.cells.Workbook)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.Workbook"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String,com.aspose.cells.Workbook)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="com.aspose.cells.Workbook"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getUidForFile(java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String,java.io.InputStream,int,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.io.InputStream"></param>
+      <param name="p2" type="int"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.lang.String,java.io.InputStream,int)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.io.InputStream"></param>
+      <param name="p2" type="int"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.io.InputStream,int,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.InputStream"></param>
+      <param name="p1" type="int"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFile(java.io.InputStream,int)">
+      <summary>Imports an Excel file from input stream.</summary>
+      <returns type="void"></returns>
+      <param name="stream" type="java.io.InputStream">Input stream.</param>
+      <param name="format" type="int">File format.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.importExcelFileFromJson(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.mergeExcelFileFromJson(java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.exportToJson(java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.exportToJson()">
+      <returns type="java.lang.String"></returns>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.exportToJsonStringBuilder(java.lang.String)">
+      <summary>Exports the workbook to JSON StringBuilder.</summary>
+      <returns type="java.lang.StringBuilder">StringBuilder with JSON data.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.exportToJsonStringBuilder(java.lang.String,java.lang.String)">
+      <returns type="java.lang.StringBuilder"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToExcelFile(java.io.OutputStream)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToExcelFile(java.lang.String)">
+      <summary>Saves the workbook to an Excel file.</summary>
+      <returns type="void"></returns>
+      <param name="filePath" type="java.lang.String">Output file path.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToCacheWithFileName(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToPdf(java.lang.String)">
+      <summary>Saves the workbook to PDF.</summary>
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToXlsx(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToHtml(java.lang.String)">
+      <summary>Saves the workbook to HTML.</summary>
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToPdf(java.io.OutputStream)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToXlsx(java.io.OutputStream)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.saveToHtml(java.io.OutputStream)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getImageStream(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="java.io.InputStream"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getOle(java.lang.String,java.lang.String,int,java.lang.String[])">
+      <returns type="byte[]"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="int"></param>
+      <param name="p3" type="java.lang.String[]"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.checkInCacheForCollaborative(java.lang.String)">
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.updateCell(java.lang.String,java.lang.String)">
+      <summary>Updates a cell in the workbook.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getCacheDirectory()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setCacheDirectory(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.redactFile(java.lang.String,java.lang.String,java.lang.String[])">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String[]"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setTransParentView(java.lang.String,java.lang.String,boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="boolean"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.burnRedactionFile(java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.dispose()">
+      <returns type="void"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.insertImage(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)">
+      <summary>Inserts an image into the workbook.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.io.InputStream"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.copyImageOrShape(java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.errorJson(java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getGridLoadFormat(java.lang.String)">
+      <returns type="int"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getImageUrl(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.setImageUrlBase(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public static</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.translateSheetAsync(java.lang.String,java.lang.String,com.aspose.gridjs.ITextTranslator,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="com.aspose.gridjs.ITextTranslator"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getWorkbookJsonWithCache(java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.getSheetJsonWithCache(java.lang.String,java.lang.String,java.lang.String)">
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.clearJsonCacheForUid(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridJsWorkbook.clearAllJsonCache()">
+      <returns type="void"></returns>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridLoadFormat">
+      <summary>Represents the GridLoadFormat class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public final class com.aspose.gridjs.GridLoadFormat {</header>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.AUTO">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.CSV">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.XLSX">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.TSV">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.TAB_DELIMITED">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.HTML">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.M_HTML">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.ODS">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.EXCEL_97_TO_2003">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.SPREADSHEET_ML">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.XLSB">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.OTS">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.NUMBERS">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.FODS">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.SXC">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.XML">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.EPUB">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.AZW_3">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.CHM">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.MARKDOWN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.UNKNOWN">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.IMAGE">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.JSON">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.DIF">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="F:com.aspose.gridjs.GridLoadFormat.DBF">
+      <type>int</type>
+      <modifiers>public static final</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridReferredArea">
+      <summary>Represents the GridReferredArea class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridReferredArea {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.isExternalLink()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getExternalFileName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getSheetName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.isArea()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getEndColumn()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getStartColumn()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getEndRow()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getStartRow()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getValues()">
+      <returns type="java.lang.Object"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridReferredArea.getValue(int,int)">
+      <returns type="java.lang.Object"></returns>
+      <param name="p0" type="int"></param>
+      <param name="p1" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridUpdateMonitor">
+      <summary>Represents the GridUpdateMonitor class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public abstract class com.aspose.gridjs.GridUpdateMonitor {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridUpdateMonitor.GridUpdateMonitor()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridUpdateMonitor.beforeUpdate(java.lang.String,java.lang.String,com.aspose.cells.Workbook)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="com.aspose.cells.Workbook"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridUpdateMonitor.afterUpdate(java.lang.String,java.lang.String,java.util.ArrayList)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.util.ArrayList"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.GridWorkbookSettings">
+      <summary>Represents the GridWorkbookSettings class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.GridWorkbookSettings {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.GridWorkbookSettings()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getMaxIteration()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setMaxIteration(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getIteration()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setIteration(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getForceFullCalculate()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setForceFullCalculate(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getCreateCalcChain()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setCreateCalcChain(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getReCalculateOnOpen()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setReCalculateOnOpen(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getPrecisionAsDisplayed()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setPrecisionAsDisplayed(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getDate1904()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setDate1904(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getEnableMacros()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setEnableMacros(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getCheckCustomNumberFormat()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setCheckCustomNumberFormat(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getCheckExcelRestriction()">
+      <returns type="boolean"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setCheckExcelRestriction(boolean)">
+      <returns type="void"></returns>
+      <param name="p0" type="boolean"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.getAuthor()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.GridWorkbookSettings.setAuthor(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.IGridJsService">
+      <summary>Interface for GridJs service operations. Provides methods for loading workbooks, updating cells, managing images, and handling file operations.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>interface</kind>
+      <header>public interface com.aspose.gridjs.IGridJsService extends org.springframework.beans.factory.DisposableBean {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.updateCell(java.lang.String,java.lang.String)">
+      <summary>Updates a cell value in the workbook.</summary>
+      <returns type="java.lang.String">JSON result string.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="json" type="java.lang.String">JSON data containing cell update info.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.checkInCacheForCollaborative(java.lang.String)">
+      <summary>Checks if workbook is in cache for collaborative editing.</summary>
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.clearJsonCacheForUid(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.clearAllJsonCache()">
+      <returns type="void"></returns>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailFileJsonWithUid(java.lang.String,java.lang.String)">
+      <summary>Loads an Excel file and returns its JSON representation with unique ID.</summary>
+      <returns type="java.lang.StringBuilder">StringBuilder containing JSON data.</returns>
+      <param name="filePath" type="java.lang.String">Full path to the Excel file.</param>
+      <param name="uid" type="java.lang.String">Unique identifier for caching.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailFileJsonWithUid(com.aspose.cells.Workbook,java.lang.String,java.lang.String)">
+      <summary>Converts a Workbook object to JSON representation with unique ID.</summary>
+      <returns type="java.lang.StringBuilder">StringBuilder containing JSON data.</returns>
+      <param name="workbook" type="com.aspose.cells.Workbook">Workbook instance.</param>
+      <param name="fileName" type="java.lang.String">File name for reference.</param>
+      <param name="uid" type="java.lang.String">Unique identifier for caching.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailStreamJsonWithUid(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <summary>Loads an Excel file and writes JSON to output stream with unique ID.</summary>
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailStreamJsonWithUid(java.io.OutputStream,com.aspose.cells.Workbook,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="com.aspose.cells.Workbook"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailStreamJson(java.io.OutputStream,java.lang.String)">
+      <summary>Loads an Excel file and writes JSON to output stream.</summary>
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.detailStreamJson(java.io.OutputStream,com.aspose.cells.Workbook,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="com.aspose.cells.Workbook"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.lazyLoadingJson(java.lang.String,java.lang.String)">
+      <summary>Gets lazy loading JSON for a sheet.</summary>
+      <returns type="java.lang.StringBuilder">JSON string for lazy loading.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="sheetName" type="java.lang.String">Sheet name.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.lazyLoadingStreamJson(java.io.OutputStream,java.lang.String,java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.io.OutputStream"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.addImage(java.lang.String,java.lang.String,java.io.InputStream)">
+      <summary>Adds an image to the workbook.</summary>
+      <returns type="java.lang.String">Image ID or URL.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="p" type="java.lang.String">Position data.</param>
+      <param name="stream" type="java.io.InputStream">Image input stream.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.addImageByURL(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)">
+      <summary>Adds an image by URL to the workbook.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.io.InputStream"></param>
+      <param name="p3" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.copyImage(java.lang.String,java.lang.String)">
+      <summary>Copies an image in the workbook.</summary>
+      <returns type="java.lang.String">New image ID.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="id" type="java.lang.String">Image ID to copy.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.load(java.lang.String,java.lang.String)">
+      <summary>Loads a workbook.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.image(java.lang.String,java.lang.String)">
+      <summary>Gets an image stream.</summary>
+      <returns type="java.io.InputStream">Input stream for the image.</returns>
+      <param name="uid" type="java.lang.String">Unique identifier.</param>
+      <param name="id" type="java.lang.String">Image ID.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.ole(java.lang.String,java.lang.String,int,java.lang.String[])">
+      <summary>Gets OLE object data.</summary>
+      <returns type="byte[]"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="int"></param>
+      <param name="p3" type="java.lang.String[]"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.imageUrl(java.lang.String,java.lang.String,java.lang.String)">
+      <summary>Gets the URL for an image.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.getFile(java.lang.String)">
+      <summary>Gets a file stream.</summary>
+      <returns type="java.io.InputStream">Input stream for the file.</returns>
+      <param name="id" type="java.lang.String">File ID.</param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.download(java.lang.String,java.lang.String,java.lang.String)">
+      <summary>Downloads a file.</summary>
+      <returns type="java.lang.String"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <param name="p2" type="java.lang.String"></param>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.getWarningCallback()">
+      <returns type="com.aspose.cells.IWarningCallback"></returns>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.setWarningCallback(com.aspose.cells.IWarningCallback)">
+      <returns type="void"></returns>
+      <param name="p0" type="com.aspose.cells.IWarningCallback"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.IGridJsService.dispose()">
+      <returns type="void"></returns>
+      <throws type="java.lang.Exception"/>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.ITextTranslator">
+      <summary>Represents the ITextTranslator interface shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>interface</kind>
+      <header>public interface com.aspose.gridjs.ITextTranslator {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.ITextTranslator.translateAsync(java.util.ArrayList,java.lang.String)">
+      <returns type="java.util.concurrent.Future"></returns>
+      <param name="p0" type="java.util.ArrayList"></param>
+      <param name="p1" type="java.lang.String"></param>
+      <modifiers>public abstract</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.OprMessage">
+      <summary>Represents the OprMessage class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.OprMessage {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.OprMessage()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getId()">
+      <returns type="java.lang.Long"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getFileId()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getUserId()">
+      <returns type="java.lang.Long"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getUserName()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getContent()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getResult()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getOperationType()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.getCreatedOn()">
+      <returns type="java.util.Date"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setId(java.lang.Long)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.Long"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setFileId(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setUserId(java.lang.Long)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.Long"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setUserName(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setContent(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setResult(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setOperationType(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.setCreatedOn(java.util.Date)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.util.Date"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.equals(java.lang.Object)">
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.Object"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.hashCode()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessage.toString()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="T:com.aspose.gridjs.OprMessageDto">
+      <summary>Represents the OprMessageDto class shipped in aspose-cells-26.10-gridjs.jar.</summary>
+      <remarks>Generated from aspose-cells-26.10-gridjs.jar with javap -public; parameter names are positional placeholders, types are authoritative.</remarks>
+      <kind>class</kind>
+      <header>public class com.aspose.gridjs.OprMessageDto {</header>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.OprMessageDto()">
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.getContent()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.getUserId()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.getOperationType()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.getRequestId()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.getClientId()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.setContent(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.setUserId(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.setOperationType(int)">
+      <returns type="void"></returns>
+      <param name="p0" type="int"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.setRequestId(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.setClientId(java.lang.String)">
+      <returns type="void"></returns>
+      <param name="p0" type="java.lang.String"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.equals(java.lang.Object)">
+      <returns type="boolean"></returns>
+      <param name="p0" type="java.lang.Object"></param>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.hashCode()">
+      <returns type="int"></returns>
+      <modifiers>public</modifiers>
+    </member>
+    <member name="M:com.aspose.gridjs.OprMessageDto.toString()">
+      <returns type="java.lang.String"></returns>
+      <modifiers>public</modifiers>
+    </member>
+  </members>
+</doc>
