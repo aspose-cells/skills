@@ -1,0 +1,1583 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>aspose-cells-gridjs</name>
+  </assembly>
+  <members>
+    <member name="T:CoWorkUserProvider">
+      <summary>Represents the user provider inerface in collabration mode.only available in java version now, will be available in .net/python version in future. Customer application can implement this interface to provide the user information.</summary>
+    </member>
+    <member name="M:CoWorkUserProvider.get_current_user_name()">
+      <summary>Gets the username of the current user</summary>
+      <returns>Current username</returns>
+    </member>
+    <member name="M:CoWorkUserProvider.get_current_user_id()">
+      <summary>Gets the unique identifier of the current user</summary>
+      <returns>Current user ID</returns>
+    </member>
+    <member name="M:CoWorkUserProvider.get_permission()">
+      <summary>Gets the permission level of the current user</summary>
+      <returns>Current user permission level</returns>
+    </member>
+    <member name="T:Config">
+      <summary>Represents all the static settings for GridJs</summary>
+    </member>
+    <member name="M:Config.__init__()">
+      <summary>Config __init__.</summary>
+    </member>
+    <member name="M:Config.set_license(str)">
+      <summary>Licenses the component. Use an empty string to switch to evaluation mode.</summary>
+      <param name="license_name">Can be a full or short file name or name of an embedded resource.</param>
+    </member>
+    <member name="M:Config.set_font_folder(str,bool)">
+      <summary>Sets the fonts folder</summary>
+      <param name="font_folder">The folder that contains TrueType fonts.</param>
+      <param name="recursive">Determines whether or not to scan subfolders.</param>
+    </member>
+    <member name="M:Config.set_font_folders(List[str],bool)">
+      <summary>Sets the fonts folders</summary>
+      <param name="font_folders">The folders that contains TrueType fonts.</param>
+      <param name="recursive">Determines whether or not to scan subfolders.</param>
+    </member>
+    <member name="M:Config.set_save_html_as_zip(bool)">
+      <summary>Gets/Sets whether to save html file as zip archive,the default is false.</summary>
+    </member>
+    <member name="P:Config.save_html_as_zip">
+      <summary>Gets/Sets whether to save html file as zip archive,the default is false.</summary>
+    </member>
+    <member name="M:Config.set_skip_invisible_shapes(bool)">
+      <summary>Gets/Sets whether to skip shapes that are invisble to UI ,the default value is true.</summary>
+    </member>
+    <member name="P:Config.skip_invisible_shapes">
+      <summary>Gets/Sets whether to skip shapes that are invisble to UI ,the default value is true.</summary>
+    </member>
+    <member name="M:Config.set_lazy_loading(bool)">
+      <summary>Gets/Sets whether to load active worksheet only,the default is false.</summary>
+    </member>
+    <member name="P:Config.lazy_loading">
+      <summary>Gets/Sets whether to load active worksheet only,the default is false.</summary>
+    </member>
+    <member name="M:Config.set_same_image_detecting(bool)">
+      <summary>Gets/Sets whether to check if images have same source,the default is true the default value is true.</summary>
+    </member>
+    <member name="P:Config.same_image_detecting">
+      <summary>Gets/Sets whether to check if images have same source,the default is true the default value is true.</summary>
+    </member>
+    <member name="M:Config.set_auto_optimize_for_large_cells(bool)">
+      <summary>Gets/Sets whether to automatically optimize the load performance for worksheet with large cells. it will ignore some style /borders to reduce the load time. the default value is true.</summary>
+    </member>
+    <member name="P:Config.auto_optimize_for_large_cells">
+      <summary>Gets/Sets whether to automatically optimize the load performance for worksheet with large cells. it will ignore some style /borders to reduce the load time. the default value is true.</summary>
+    </member>
+    <member name="M:Config.set_islimit_shape_or_image(bool)">
+      <summary>Gets/Sets whether to limit the total display shape/image count in one worksheet ,if set to true, GridJs will limit the total count of the display shapes or images in one worksheet to MaxShapeOrImageCount the default value is true.</summary>
+    </member>
+    <member name="P:Config.islimit_shape_or_image">
+      <summary>Gets/Sets whether to limit the total display shape/image count in one worksheet ,if set to true, GridJs will limit the total count of the display shapes or images in one worksheet to MaxShapeOrImageCount the default value is true.</summary>
+    </member>
+    <member name="M:Config.set_max_shape_or_image_count(int)">
+      <summary>Gets/Sets the total count of the display shapes or images in the active sheet,it takes effect when IslimitShapeOrImage=true. the default value is 100.</summary>
+    </member>
+    <member name="P:Config.max_shape_or_image_count">
+      <summary>Gets/Sets the total count of the display shapes or images in the active sheet,it takes effect when IslimitShapeOrImage=true. the default value is 100.</summary>
+    </member>
+    <member name="M:Config.set_max_total_shape_or_image_count(int)">
+      <summary>Gets/Sets the total count of the display shapes or images in the workbook,it takes effect when IslimitShapeOrImage=true. the default value is 300.</summary>
+    </member>
+    <member name="P:Config.max_total_shape_or_image_count">
+      <summary>Gets/Sets the total count of the display shapes or images in the workbook,it takes effect when IslimitShapeOrImage=true. the default value is 300.</summary>
+    </member>
+    <member name="M:Config.set_max_shape_or_image_width_or_height(int)">
+      <summary>Gets/Sets the max width or height for a shape or an image ,GridJs will ignore the shape or image with the width or height larger than this, it takes effect when IslimitShapeOrImage=true. the default value is 10000.</summary>
+    </member>
+    <member name="P:Config.max_shape_or_image_width_or_height">
+      <summary>Gets/Sets the max width or height for a shape or an image ,GridJs will ignore the shape or image with the width or height larger than this, it takes effect when IslimitShapeOrImage=true. the default value is 10000.</summary>
+    </member>
+    <member name="M:Config.set_max_pdf_save_seconds(int)">
+      <summary>Gets/Sets the max timed out seconds when save to PDF. the default value is 10.</summary>
+    </member>
+    <member name="P:Config.max_pdf_save_seconds">
+      <summary>Gets/Sets the max timed out seconds when save to PDF. the default value is 10.</summary>
+    </member>
+    <member name="M:Config.set_ignore_empty_content(bool)">
+      <summary>Gets/Sets whether to show the max range which includes data ,style, merged cells and shapes. if the last row or column contains cells with no value and formula but has custom style then we will not show this row/column when this vlaue is true。 the default value is true .</summary>
+    </member>
+    <member name="P:Config.ignore_empty_content">
+      <summary>Gets/Sets whether to show the max range which includes data ,style, merged cells and shapes. if the last row or column contains cells with no value and formula but has custom style then we will not show this row/column when this vlaue is true。 the default value is true .</summary>
+    </member>
+    <member name="M:Config.set_use_print_area(bool)">
+      <summary>Gets/Sets whether to use PageSetup.PrintArea for the UI display range when the worksheet has PageSetup setting for PrintArea. the default value is false .</summary>
+    </member>
+    <member name="P:Config.use_print_area">
+      <summary>Gets/Sets whether to use PageSetup.PrintArea for the UI display range when the worksheet has PageSetup setting for PrintArea. the default value is false .</summary>
+    </member>
+    <member name="M:Config.set_is_collaborative(bool)">
+      <summary>Gets/Sets whether to support collabrative editing,the default is false.</summary>
+    </member>
+    <member name="P:Config.is_collaborative">
+      <summary>Gets/Sets whether to support collabrative editing,the default is false.</summary>
+    </member>
+    <member name="M:Config.set_enable_chart_client_rendering(bool)">
+      <summary>Gets/Sets whether to enable client-side chart rendering. If set to false, GridJs will fall back to server-generated chart images/shapes only. the default value is true.</summary>
+    </member>
+    <member name="P:Config.enable_chart_client_rendering">
+      <summary>Gets/Sets whether to enable client-side chart rendering. If set to false, GridJs will fall back to server-generated chart images/shapes only. the default value is true.</summary>
+    </member>
+    <member name="M:Config.set_custom_pdf_save_options(PdfSaveOptions)">
+      <summary>Gets/Sets the custom PdfSaveOptions for PDF export. If set, this will be used instead of the default options. the default value is null.</summary>
+    </member>
+    <member name="P:Config.custom_pdf_save_options">
+      <summary>Gets/Sets the custom PdfSaveOptions for PDF export. If set, this will be used instead of the default options. the default value is null.</summary>
+    </member>
+    <member name="M:Config.set_load_time_out(int)">
+      <summary>Gets/Sets a timeout interrupt in milliseconds in loading file, when the cost time period of loading file is longer than the expectation ，it will raise exception. the default value is -1,which means no timeout interrupt is set .</summary>
+    </member>
+    <member name="P:Config.load_time_out">
+      <summary>Gets/Sets a timeout interrupt in milliseconds in loading file, when the cost time period of loading file is longer than the expectation ，it will raise exception. the default value is -1,which means no timeout interrupt is set .</summary>
+    </member>
+    <member name="M:Config.set_show_chart_sheet(bool)">
+      <summary>Gets/Sets whether to show chart worksheet. the default value is false .</summary>
+    </member>
+    <member name="P:Config.show_chart_sheet">
+      <summary>Gets/Sets whether to show chart worksheet. the default value is false .</summary>
+    </member>
+    <member name="M:Config.set_empty_sheet_max_row(int)">
+      <summary>Gets/Sets default max row for an empty worksheet. the default value is 12.</summary>
+    </member>
+    <member name="P:Config.empty_sheet_max_row">
+      <summary>Gets/Sets default max row for an empty worksheet. the default value is 12.</summary>
+    </member>
+    <member name="M:Config.set_empty_sheet_max_col(int)">
+      <summary>Gets/Sets default max column for an empty worksheet. the default value is 15.</summary>
+    </member>
+    <member name="P:Config.empty_sheet_max_col">
+      <summary>Gets/Sets default max column for an empty worksheet. the default value is 15.</summary>
+    </member>
+    <member name="M:Config.set_picture_cache_directory(str)">
+      <summary>Gets/Sets the cache directory for pictures.(this takes effect when GridJsWorkbook.CacheImp is null) the default path will be "_piccache" inside the FileCacheDirectory.</summary>
+    </member>
+    <member name="P:Config.picture_cache_directory">
+      <summary>Gets/Sets the cache directory for pictures.(this takes effect when GridJsWorkbook.CacheImp is null) the default path will be "_piccache" inside the FileCacheDirectory.</summary>
+    </member>
+    <member name="M:Config.set_file_cache_directory(str)">
+      <summary>Gets/Sets the cache directory for storing spreadsheet file. We need to set it to a specific path before we use GridJs.</summary>
+    </member>
+    <member name="P:Config.file_cache_directory">
+      <summary>Gets/Sets the cache directory for storing spreadsheet file. We need to set it to a specific path before we use GridJs.</summary>
+    </member>
+    <member name="M:Config.set_base_route_name(str)">
+      <summary>Gets/Sets the base route name for GridJs controller URL. the default is "/GridJs2".</summary>
+    </member>
+    <member name="P:Config.base_route_name">
+      <summary>Gets/Sets the base route name for GridJs controller URL. the default is "/GridJs2".</summary>
+    </member>
+    <member name="M:Config.set_message_topic(str)">
+      <summary>Gets/Sets the websocket destinations prefixed with "/topic". the default is "/topic/opr".used in collaborative mode only.</summary>
+    </member>
+    <member name="P:Config.message_topic">
+      <summary>Gets/Sets the websocket destinations prefixed with "/topic". the default is "/topic/opr".used in collaborative mode only.</summary>
+    </member>
+    <member name="M:Config.set_auto_fit_rows_height_on_load(bool)">
+      <summary>Indicates whether to auto-fit row heights during file loading. The default value is ``false``. Warning: Setting this to ``true`` will perform an auto-fit all rows operation post-load, which may have a noticeable impact on performance.</summary>
+    </member>
+    <member name="P:Config.auto_fit_rows_height_on_load">
+      <summary>Indicates whether to auto-fit row heights during file loading. The default value is ``false``. Warning: Setting this to ``true`` will perform an auto-fit all rows operation post-load, which may have a noticeable impact on performance.</summary>
+    </member>
+    <member name="M:Config.set_auto_fit_columns_on_load(bool)">
+      <summary>Indicates whether to auto-fit column widths during file loading. The default value is ``false``. Warning: Setting this to ``true`` will perform an auto-fit all columns operation post-load, which may have a noticeable impact on performance.</summary>
+    </member>
+    <member name="P:Config.auto_fit_columns_on_load">
+      <summary>Indicates whether to auto-fit column widths during file loading. The default value is ``false``. Warning: Setting this to ``true`` will perform an auto-fit all columns operation post-load, which may have a noticeable impact on performance.</summary>
+    </member>
+    <member name="M:Config.set_redaction_use_client_generate_id(bool)">
+      <summary>Indicates whether use client generate id instead of actual shape id in redaction related operations</summary>
+    </member>
+    <member name="P:Config.redaction_use_client_generate_id">
+      <summary>Indicates whether use client generate id instead of actual shape id in redaction related operations</summary>
+    </member>
+    <member name="T:GridAbstractCalculationEngine">
+      <summary>Represents user\'s custom calculation engine to extend the default calculation engine of Aspose.Cells.</summary>
+    </member>
+    <member name="M:GridAbstractCalculationEngine.calculate(GridCalculationData)">
+      <summary>Calculates one function with given data.</summary>
+      <param name="data">The required data to calculate function such as function name, parameters, ...etc.</param>
+    </member>
+    <member name="T:GridCacheForStream">
+      <summary>This class contains the cache operations for GridJs. User shall implement his own business logic for storage based on it..</summary>
+    </member>
+    <member name="M:GridCacheForStream.save_stream(io._IOBase,str)">
+      <summary>Implements this method to save cache,save the stream to the cache with the key uid.</summary>
+    </member>
+    <member name="M:GridCacheForStream.load_stream(str)">
+      <summary>Implements this method to load cache with the key uid,return the stream from the cache.</summary>
+      <returns>Returns io._IOBase.</returns>
+    </member>
+    <member name="M:GridCacheForStream.is_existed(str)">
+      <summary>Checks whether the cache with uid is existed</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The bool value</returns>
+    </member>
+    <member name="M:GridCacheForStream.get_file_url(str)">
+      <summary>Implements this method to get the file url from the cache.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The URL of the file</returns>
+    </member>
+    <member name="T:GridCalculationData">
+      <summary>Represents the required data when calculating one function, such as function name, parameters, ...etc.</summary>
+    </member>
+    <member name="M:GridCalculationData.get_param_value(int)">
+      <summary>Gets the represented value object of the parameter at given index. If the parameter is reference, then return ReferredArea object.</summary>
+      <param name="index">The index of the parameter(0 based).</param>
+      <returns>If the parameter is plain value, then returns the plain value.</returns>
+    </member>
+    <member name="M:GridCalculationData.get_param_text(int)">
+      <summary>Gets the literal text of the parameter at given index.</summary>
+      <param name="index">The index of the parameter(0 based).</param>
+      <returns>The literal text of the parameter.</returns>
+    </member>
+    <member name="P:GridCalculationData.calculated_value">
+      <summary>Gets/sets the calculated value for this function.</summary>
+    </member>
+    <member name="P:GridCalculationData.row">
+      <summary>Gets the Cell Row index where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.column">
+      <summary>Gets the Cell Column index where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.string_value">
+      <summary>Gets the Cell DisplayStringValue where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.value">
+      <summary>Gets the Cell value where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.formula">
+      <summary>Gets the Cell formula where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.sheet_name">
+      <summary>Gets the worksheet name where the function is in.</summary>
+    </member>
+    <member name="P:GridCalculationData.function_name">
+      <summary>Gets the function name to be calculated.</summary>
+    </member>
+    <member name="P:GridCalculationData.param_count">
+      <summary>Gets the count of parameters .</summary>
+    </member>
+    <member name="T:GridCellException">
+      <summary>The exception that is thrown when GridJs specified error occurs.</summary>
+    </member>
+    <member name="M:GridCellException.to_string()">
+      <summary>Creates and returns a string representation of the current exception.</summary>
+      <returns>Returns str.</returns>
+    </member>
+    <member name="P:GridCellException.code">
+      <summary>Represents the exception code.</summary>
+    </member>
+    <member name="T:GridJsControllerBase">
+      <summary>Represents the GridJsControllerBase type.</summary>
+    </member>
+    <member name="M:GridJsControllerBase.__init__(IGridJsService)">
+      <summary>GridJsControllerBase __init__.</summary>
+    </member>
+    <member name="T:GridJsLogger">
+      <summary>Provides a lightweight logging system for GridJs server. Supports console and file output with configurable log levels. Default level is None. In DEBUG build, the default level is Debug (outputs all messages). Supports log file rolling by day/week/month.</summary>
+    </member>
+    <member name="M:GridJsLogger.set_log_file(str)">
+      <summary>Sets the log file path and enables file output (single file mode, no rolling). Appends to existing file.</summary>
+      <param name="file_path">The full path to the log file.</param>
+    </member>
+    <member name="M:GridJsLogger.set_log_directory(str)">
+      <summary>Sets the log directory with daily rolling file strategy and enables file output. Log files will be named as: gridjs_{period}.log</summary>
+      <param name="directory">The directory to store log files.</param>
+    </member>
+    <member name="M:GridJsLogger.close_log_file()">
+      <summary>Closes the log file writer and disables file output.</summary>
+    </member>
+    <member name="M:GridJsLogger.debug(str)">
+      <summary>Logs a debug level message.</summary>
+    </member>
+    <member name="M:GridJsLogger.info(str)">
+      <summary>Logs an info level message.</summary>
+    </member>
+    <member name="M:GridJsLogger.warn(str)">
+      <summary>Logs a warning level message.</summary>
+    </member>
+    <member name="M:GridJsLogger.error(str)">
+      <summary>Logs an error level message.</summary>
+    </member>
+    <member name="M:GridJsLogger.log(GridJsLogLevel,str)">
+      <summary>Logs a message at the specified level.</summary>
+      <param name="level">The log level.</param>
+      <param name="message">The message to log.</param>
+    </member>
+    <member name="M:GridJsLogger.set_level(GridJsLogLevel)">
+      <summary>Gets the minimum log level. Messages below this level will be ignored. Default is None.</summary>
+    </member>
+    <member name="P:GridJsLogger.level">
+      <summary>Sets the minimum log level. Messages below this level will be ignored. Default is None.</summary>
+    </member>
+    <member name="M:GridJsLogger.set_enable_console_output(bool)">
+      <summary>Gets whether to output log messages to the console. Default is false.</summary>
+    </member>
+    <member name="P:GridJsLogger.enable_console_output">
+      <summary>Sets whether to output log messages to the console. Default is false.</summary>
+    </member>
+    <member name="M:GridJsLogger.set_enable_file_output(bool)">
+      <summary>Gets whether to output log messages to a file. Default is false. Must call :py:func:`aspose.cellsgridjs.GridJsLogger.set_log_file` or :py:func:`aspose.cellsgridjs.GridJsLogger.set_log_directory` before enabling.</summary>
+    </member>
+    <member name="P:GridJsLogger.enable_file_output">
+      <summary>Sets whether to output log messages to a file. Default is false. Must call :py:func:`aspose.cellsgridjs.GridJsLogger.set_log_file` or :py:func:`aspose.cellsgridjs.GridJsLogger.set_log_directory` before enabling.</summary>
+    </member>
+    <member name="P:GridJsLogger.log_file_path">
+      <summary>Gets the current log file path, or null if not set.</summary>
+    </member>
+    <member name="M:GridJsLogger.set_max_file_size(int)">
+      <summary>Gets the maximum size (in bytes) for a single log file before rolling. Only effective when rolling is enabled. 0 means no size limit. Default is 0.</summary>
+    </member>
+    <member name="P:GridJsLogger.max_file_size">
+      <summary>Sets the maximum size (in bytes) for a single log file before rolling. Only effective when rolling is enabled. 0 means no size limit. Default is 0.</summary>
+    </member>
+    <member name="T:GridJsOptions">
+      <summary>Represents all the load options for GridJs</summary>
+    </member>
+    <member name="M:GridJsOptions.__init__()">
+      <summary>GridJsOptions __init__.</summary>
+    </member>
+    <member name="P:GridJsOptions.save_html_as_zip">
+      <summary>Gets/Sets whether to save html file as zip archive,the default is false.</summary>
+    </member>
+    <member name="P:GridJsOptions.skip_invisible_shapes">
+      <summary>Gets/Sets whether to skip shapes that are invisble to UI ,the default value is true.</summary>
+    </member>
+    <member name="P:GridJsOptions.lazy_loading">
+      <summary>Gets/Sets whether to load active worksheet only,the default is false.</summary>
+    </member>
+    <member name="P:GridJsOptions.same_image_detecting">
+      <summary>Gets/Sets whether to check if images have same source,the default is true the default value is true.</summary>
+    </member>
+    <member name="P:GridJsOptions.auto_optimize_for_large_cells">
+      <summary>Gets/Sets whether to automatically optimize the load performance for worksheet with large cells. it will ignore some style /borders to reduce the load time. the default value is true.</summary>
+    </member>
+    <member name="P:GridJsOptions.islimit_shape_or_image">
+      <summary>Gets/Sets whether to limit the total display shape/image count in one worksheet ,if set to true, GridJs will limit the total count of the display shapes or images in one worksheet to MaxShapeOrImageCount the default value is true.</summary>
+    </member>
+    <member name="P:GridJsOptions.max_shape_or_image_count">
+      <summary>Gets/Sets the total count of the display shapes or images in the active sheet,it takes effect when IslimitShapeOrImage=true. the default value is 100.</summary>
+    </member>
+    <member name="P:GridJsOptions.max_total_shape_or_image_count">
+      <summary>Gets/Sets the total count of the display shapes or images in the workbook,it takes effect when IslimitShapeOrImage=true. the default value is 300.</summary>
+    </member>
+    <member name="P:GridJsOptions.max_shape_or_image_width_or_height">
+      <summary>Gets/Sets the max width or height for a shape or an image ,GridJs will ignore the shape or image with the width or height larger than this, it takes effect when IslimitShapeOrImage=true. the default value is 10000.</summary>
+    </member>
+    <member name="P:GridJsOptions.max_pdf_save_seconds">
+      <summary>Gets/Sets the max timed out seconds when save to PDF. the default value is 10.</summary>
+    </member>
+    <member name="P:GridJsOptions.ignore_empty_content">
+      <summary>Gets/Sets whether to show the max range which includes data ,style, merged cells and shapes. if the last row or column contains cells with no value and formula but has custom style then we will not show this row/column when this vlaue is true。 the default value is true .</summary>
+    </member>
+    <member name="P:GridJsOptions.use_print_area">
+      <summary>Gets/Sets whether to use PageSetup.PrintArea for the UI display range when the worksheet has PageSetup setting for PrintArea. the default value is false .</summary>
+    </member>
+    <member name="P:GridJsOptions.is_collaborative">
+      <summary>Gets/Sets whether to support collabrative editing,the default is false.</summary>
+    </member>
+    <member name="P:GridJsOptions.enable_chart_client_rendering">
+      <summary>Gets/Sets whether to enable client-side chart rendering. If set to false, GridJs will emit chart images/shapes only and will not require client-side chart rendering. the default value is true.</summary>
+    </member>
+    <member name="P:GridJsOptions.custom_pdf_save_options">
+      <summary>Gets/Sets the custom PdfSaveOptions for PDF export. If set, this will be used instead of the default options. the default value is null.</summary>
+    </member>
+    <member name="P:GridJsOptions.load_time_out">
+      <summary>Gets/Sets a timeout interrupt in milliseconds in loading file, when the cost time period of loading file is longer than the expectation ，it will raise exception. the default value is -1,which means no timeout interrupt is set .</summary>
+    </member>
+    <member name="P:GridJsOptions.show_chart_sheet">
+      <summary>Gets/Sets whether to show chart worksheet. the default value is false .</summary>
+    </member>
+    <member name="P:GridJsOptions.empty_sheet_max_row">
+      <summary>Gets/Sets default max row for an empty worksheet. the default value is 12.</summary>
+    </member>
+    <member name="P:GridJsOptions.empty_sheet_max_col">
+      <summary>Gets/Sets default max column for an empty worksheet. the default value is 15.</summary>
+    </member>
+    <member name="P:GridJsOptions.picture_cache_directory">
+      <summary>Gets/Sets the cache directory for pictures.(this takes effect when GridJsWorkbook.CacheImp is null) the default path will be "_piccache" inside the FileCacheDirectory.</summary>
+    </member>
+    <member name="P:GridJsOptions.file_cache_directory">
+      <summary>Gets/Sets the cache directory for storing spreadsheet file. We need to set it to a specific path before we use GridJs.</summary>
+    </member>
+    <member name="P:GridJsOptions.font_folders">
+      <summary>Gets/Sets the fonts folders for fonts in the rendered pictures/shapes</summary>
+    </member>
+    <member name="P:GridJsOptions.base_route_name">
+      <summary>Gets/Sets the route URL base name for GridJs controller.the default is GridJs2</summary>
+    </member>
+    <member name="P:GridJsOptions.message_topic">
+      <summary>Gets/Sets the websocket destinations prefixed with "/topic". the default is "/topic/opr".used in collaborative mode only.</summary>
+    </member>
+    <member name="P:GridJsOptions.auto_fit_rows_height_on_load">
+      <summary>Indicates whether to autofit rows height when loading the file,the default value is false.</summary>
+    </member>
+    <member name="P:GridJsOptions.auto_fit_columns_on_load">
+      <summary>Indicates whether to autofit columns width when loading the file,the default value is false.</summary>
+    </member>
+    <member name="P:GridJsOptions.cache_imp">
+      <summary>Custom implemention for cache storage,If you want to store cache in stream way ,you need to set and implement it.</summary>
+    </member>
+    <member name="P:GridJsOptions.redaction_use_client_generate_id">
+      <summary>Indicates whether use client generate id instead of actual shape id in redaction related operations</summary>
+    </member>
+    <member name="T:GridJsPermissionException">
+      <summary>represents permission exception in collaboration mode.only available in java version now, will be available in .net/python version in future.</summary>
+    </member>
+    <member name="M:GridJsPermissionException.__init__(str,CoWorkUserPermission,CoWorkUserPermission)">
+      <summary>Constructs a permission exception</summary>
+      <param name="operation">Operation attempted to execute</param>
+      <param name="required_permission">Permission required for the operation</param>
+      <param name="current_permission">Current user permission</param>
+    </member>
+    <member name="M:GridJsPermissionException.get_required_permission()">
+      <summary>Gets the permission level required for the operation</summary>
+      <returns>Required permission level</returns>
+    </member>
+    <member name="M:GridJsPermissionException.get_current_permission()">
+      <summary>Gets the current permission level of the user</summary>
+      <returns>Current user permission level</returns>
+    </member>
+    <member name="M:GridJsPermissionException.get_operation()">
+      <summary>Gets the operation that was attempted to execute</summary>
+      <returns>Operation name</returns>
+    </member>
+    <member name="T:GridJsService">
+      <summary>Provides the basic operation apis used in controller actions.</summary>
+    </member>
+    <member name="M:GridJsService.__init__(GridJsOptions)">
+      <summary>The default constructor for GridJsService</summary>
+    </member>
+    <member name="M:GridJsService.get_warning_callback()">
+      <summary>Gets custom warning callback for import file.</summary>
+      <returns>The warning callback</returns>
+    </member>
+    <member name="M:GridJsService.set_warning_callback(IWarningCallback)">
+      <summary>Sets custom warning callback for import file.</summary>
+      <param name="callback">The warning callback</param>
+    </member>
+    <member name="M:GridJsService.check_in_cache_for_collaborative(str)">
+      <summary>Check wether workbook instance is in memory cache .this method is apply for Collaborative mode only.</summary>
+      <returns>Returns bool.</returns>
+    </member>
+    <member name="M:GridJsService.update_cell(str,str)">
+      <summary>Applies the update operation.</summary>
+      <param name="p">The JSON format string of update operation.</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The JSON format string of the update result.</returns>
+    </member>
+    <member name="M:GridJsService.detail_stream_json_with_uid(io._IOBase,str,str)">
+      <summary>Write the JSON string for the file to the stream by the specified unique id.</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="file_path">The file path</param>
+      <param name="uid">The unique id for the file cache.</param>
+    </member>
+    <member name="M:GridJsService.detail_stream_json(io._IOBase,str)">
+      <summary>Write the JSON string for the file to the stream .</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="file_path">The file path</param>
+    </member>
+    <member name="M:GridJsService.lazy_loading_stream_json(io._IOBase,str,str)">
+      <summary>Writes the JSON string of the specified sheet in the file from the cache using the specified unique id to the stream..</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="sheet_name">The sheet name.</param>
+      <param name="uid">The unique id for the file cache.</param>
+    </member>
+    <member name="M:GridJsService.add_image(str,str,str,io._IOBase)">
+      <summary>Applies the add image from local file operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="iscontrol">Specify whether it is a control.</param>
+      <param name="file_input_stream">The input stream form file of the image</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:GridJsService.add_image_by_url(str,str,str)">
+      <summary>Applies the add image from remote URL operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="imageurl">Specify the image URL.</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:GridJsService.copy_image(str,str)">
+      <summary>Applies the copy image operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:GridJsService.load(str,str)">
+      <summary>Gets the JSON string of the file from the cache using the specified unique id,set the output filename in the JSON.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1.</param>
+      <returns>The JSON string</returns>
+    </member>
+    <member name="M:GridJsService.image(str,str)">
+      <summary>Get Stream of image.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="picid">The image id.</param>
+      <returns>The image stream</returns>
+    </member>
+    <member name="M:GridJsService.ole(str,str,int,List[str])">
+      <summary>Gets the byte array data of the embedded ole object .</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="sheetname">The worksheet name.</param>
+      <param name="oleid">The  id for the embedded ole object.</param>
+      <param name="label">The display label of the embedded ole object.</param>
+      <returns>The byte array data of the  embedded ole object .</returns>
+    </member>
+    <member name="M:GridJsService.image_url(str,str,str)">
+      <summary>Gets the image URL.</summary>
+      <param name="base_url">The base action URL.</param>
+      <param name="picid">The image id.</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The image URL</returns>
+    </member>
+    <member name="M:GridJsService.get_file(str)">
+      <summary>Get file stream</summary>
+      <param name="fileid">the file id</param>
+      <returns>The stream of the file</returns>
+    </member>
+    <member name="M:GridJsService.download(str,str,str)">
+      <summary>Applies the download file operation</summary>
+      <param name="p">The JSON parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">The file name</param>
+      <returns>The file URL</returns>
+    </member>
+    <member name="M:GridJsService.destroy()">
+      <summary>this method is for java only ,it implement the destroy method in DisposableBean ,which will be called automatically by Spring when finish request, actually it will call Dispose method</summary>
+    </member>
+    <member name="P:GridJsService.settings">
+      <summary>Represents the workbook settings.</summary>
+    </member>
+    <member name="T:GridJsWorkbook">
+      <summary>Represents the main entry class for GridJs</summary>
+    </member>
+    <member name="M:GridJsWorkbook.__init__()">
+      <summary>Creates a new instance of GridJsWorkbook.</summary>
+    </member>
+    <member name="M:GridJsWorkbook.import_excel_file(str,str,str)">
+      <summary>Imports the excel file from file path and open password.</summary>
+      <param name="uid">The unique id for the file cache, if set to null,it will be generated automatically.</param>
+      <param name="file_name">The full path of the file.</param>
+      <param name="password">The open password  of the excel file.The value can be null If no passowrd is set.</param>
+    </member>
+    <member name="M:GridJsWorkbook.export_to_json(str)">
+      <summary>Gets JSON string from memory data,set the output filename in the JSON.</summary>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1..</param>
+      <returns>The JSON string.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.save_to_excel_file(io._IOBase)">
+      <summary>Saves the memory data to the sream, baseed on the origin file format.</summary>
+      <param name="stream">The stream to save.</param>
+    </member>
+    <member name="M:GridJsWorkbook.save_to_pdf(str)">
+      <summary>Saves the memory data to the file path,the save format is pdf.</summary>
+      <param name="path">The file path to save.</param>
+    </member>
+    <member name="M:GridJsWorkbook.save_to_xlsx(str)">
+      <summary>Saves the memory data to the file path,the save format is xlsx.</summary>
+      <param name="path">The file path to save.</param>
+    </member>
+    <member name="M:GridJsWorkbook.save_to_html(str)">
+      <summary>Saves the memory data to the file path,the save format is html.</summary>
+      <param name="path">The file path to save.</param>
+    </member>
+    <member name="M:GridJsWorkbook.json_to_stream_by_uid(io._IOBase,str,str)">
+      <summary>Retrieve the JSON string of the file from the cache using the specified unique id,set the output filename in the JSON,and write it to the stream.</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1.</param>
+      <returns>Returns bool.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.json_to_stream(io._IOBase,str)">
+      <summary>Retrieve the JSON string from memory data,set the output filename in the JSON, and write it to the stream.</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1.</param>
+    </member>
+    <member name="M:GridJsWorkbook.lazy_loading_stream(io._IOBase,str,str)">
+      <summary>Retrieve the JSON string of the specified sheet in the file from the cache using the specified unique id, and write it to the stream.</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="sheet_name">the sheet name.</param>
+    </member>
+    <member name="M:GridJsWorkbook.get_json_str_by_uid(str,str)">
+      <summary>Gets the JSON string of the file from the cache using the specified unique id,set the output filename in the JSON.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1.</param>
+      <returns>The JSON  string</returns>
+    </member>
+    <member name="M:GridJsWorkbook.lazy_loading_json_str(str,str)">
+      <summary>Gets the JSON string of the specified sheet in the file from the cache using the specified unique id.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="sheet_name">the sheet name .</param>
+      <returns>The JSON string</returns>
+    </member>
+    <member name="M:GridJsWorkbook.get_uid_for_file(str)">
+      <summary>Generates a new unique id for the file cache using the given file name.</summary>
+      <param name="file_name">The file name.</param>
+      <returns>Returns str.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.import_excel_file_from_json(str)">
+      <summary>Imports the excel file from JSON format string.</summary>
+      <param name="json">The JSON format string.</param>
+    </member>
+    <member name="M:GridJsWorkbook.merge_excel_file_from_json(str,str)">
+      <summary>Applies a batch update to the memory data.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="json">The update JSON format string.</param>
+    </member>
+    <member name="M:GridJsWorkbook.save_to_cache_with_file_name(str,str,str)">
+      <summary>Saves the memory data to the cache file with the specified filename and also set the open password, the save format is baseed on the file extension of the filename .</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">The filename to save.</param>
+      <param name="password">The excel file\'s open password. The value can be null If no passowrd is set.</param>
+    </member>
+    <member name="M:GridJsWorkbook.get_image_stream(str,str,str)">
+      <summary>Get Stream of image.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="picid">The image id.</param>
+      <returns>The image stream</returns>
+    </member>
+    <member name="M:GridJsWorkbook.get_ole(str,str,int,List[str])">
+      <summary>Gets the byte array data of the embedded ole object .</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="sheetname">The worksheet name.</param>
+      <param name="oleid">The  id for the embedded ole object.</param>
+      <param name="label">The display label of the embedded ole object.</param>
+      <returns>The byte array data of the  embedded ole object .</returns>
+    </member>
+    <member name="M:GridJsWorkbook.check_in_cache_for_collaborative(str)">
+      <summary>Check wether workbook instance is in memory cache .this method is apply for Collaborative mode only.</summary>
+      <returns>Returns bool.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.update_cell(str,str)">
+      <summary>Applies the update operation.</summary>
+      <param name="p">The JSON format string of update operation.</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The JSON format string of the update result.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.redact_file(str,str,List[str])">
+      <summary>Performs redaction on an Excel file based on an array of JSON operations.</summary>
+      <param name="excel_file_path">The file path of the Excel file to be redacted.</param>
+      <param name="uid">The unique identifier for the workbook. If null or empty, a new uid will be generated based on the file path.</param>
+      <param name="array_of_redaction_opr">An array of JSON strings representing the redaction operations to be applied.</param>
+    </member>
+    <member name="M:GridJsWorkbook.set_trans_parent_view(str,str,bool)">
+      <summary>Sets the transparency of redaction shapes in the workbook.</summary>
+      <param name="excel_file_path">The file path of the Excel file.</param>
+      <param name="uid">The unique identifier for the workbook. If null or empty, a new uid will be generated based on the file path.</param>
+      <param name="is_transparent">If true, sets transparency to 0.89 (semi-transparent); if false, sets transparency to 1 (fully opaque/invisible).</param>
+    </member>
+    <member name="M:GridJsWorkbook.burn_redaction_file(str,str)">
+      <summary>Burns (applies) all redaction operations in the workbook by removing redaction shapes and their target shapes or clearing target cell range contents.</summary>
+      <param name="excel_file_path">The file path of the Excel file.</param>
+      <param name="uid">The unique identifier for the workbook. If null or empty, a new uid will be generated based on the file path.</param>
+    </member>
+    <member name="M:GridJsWorkbook.dispose()">
+      <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+    </member>
+    <member name="M:GridJsWorkbook.insert_image(str,str,io._IOBase,str)">
+      <summary>Inserts image in the worksheet from file stream or the URL,(either the file stream or the URL shall be provided) or Inserts shape ,when the p.type is one of AutoShapeType</summary>
+      <param name="uid">The unique id for the file cache</param>
+      <param name="p">The JSON format string for the operation which specify the cell location  ,the worksheet name,upper left row,upper left column for the image，etc  {name:\'sheet1\',ri:1,ci:1}</param>
+      <param name="s">The file stream of the image file</param>
+      <param name="image_url">The URL of the image file</param>
+      <returns>The JSON format string of the inserted image</returns>
+    </member>
+    <member name="M:GridJsWorkbook.copy_image_or_shape(str,str)">
+      <summary>Copys image or shape.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="p">The JSON string for the operation which specify the cell location ,it contains the worksheet name,upper left row,upper left column for the image or shape，etc  {name:\'sheet1\',ri:1,ci:1,srcid:2,srcname:\'sheet2\',isshape:true}</param>
+      <returns>The JSON string of the new copied image</returns>
+    </member>
+    <member name="M:GridJsWorkbook.error_json(str)">
+      <summary>Gets the error message string in JSON format.</summary>
+      <param name="msg">The error message.</param>
+      <returns>The JSON string.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.get_grid_load_format(str)">
+      <summary>Gets the load format by file extension</summary>
+      <param name="extension">The file extention ,usually start with \'.\' .</param>
+      <returns>Returns GridLoadFormat.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.get_image_url(str,str,str)">
+      <summary>Gets the image URL.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="picid">The image id.</param>
+      <param name="delimiter">The string delimiter.</param>
+      <returns>Returns str.</returns>
+    </member>
+    <member name="M:GridJsWorkbook.set_image_url_base(str)">
+      <summary>Set the base image get action URL from controller .</summary>
+      <param name="base_image_url">the base image get action URL.</param>
+    </member>
+    <member name="P:GridJsWorkbook.settings">
+      <summary>Represents the workbook settings.</summary>
+    </member>
+    <member name="P:GridJsWorkbook.warning_callback">
+      <summary>Gets warning callback for import file.</summary>
+    </member>
+    <member name="P:GridJsWorkbook.cache_directory">
+      <summary>Gets/Sets the cache directory for storing spreadsheet file. if this is not set ,we will use the static propertie from :py:attr:`aspose.cellsgridjs.Config.file_cache_directory` or :py:attr:`aspose.cellsgridjs.GridJsWorkbook.cache_imp` .</summary>
+    </member>
+    <member name="M:GridJsWorkbook.set_cache_imp(GridCacheForStream)">
+      <summary>Custom implemention for cache storage,If you want to store cache in stream way ,you need to set and implement it.</summary>
+    </member>
+    <member name="P:GridJsWorkbook.cache_imp">
+      <summary>Custom implemention for cache storage,If you want to store cache in stream way ,you need to set and implement it.</summary>
+    </member>
+    <member name="M:GridJsWorkbook.set_calculate_engine(GridAbstractCalculationEngine)">
+      <summary>Custom implemention for calculation engine ,If you want to do custom calculation, you need to set and implement it.</summary>
+    </member>
+    <member name="P:GridJsWorkbook.calculate_engine">
+      <summary>Custom implemention for calculation engine ,If you want to do custom calculation, you need to set and implement it.</summary>
+    </member>
+    <member name="M:GridJsWorkbook.set_update_monitor(GridUpdateMonitor)">
+      <summary>Gets/Sets the update monitor to track update operation</summary>
+    </member>
+    <member name="P:GridJsWorkbook.update_monitor">
+      <summary>Gets/Sets the update monitor to track update operation</summary>
+    </member>
+    <member name="P:GridJsWorkbook.PICTURE_TYPE">
+      <summary>const value for the type of the image</summary>
+    </member>
+    <member name="T:GridReferredArea">
+      <summary>Represents a referred area by the formula.</summary>
+    </member>
+    <member name="M:GridReferredArea.get_values()">
+      <summary>Gets cell values in this area. If this area is one single cell, then return the cell value object; Otherwise return one array for all values in this area.</summary>
+      <returns>If this area is invalid, "#REF!" will be returned;</returns>
+    </member>
+    <member name="M:GridReferredArea.get_value(int,int)">
+      <summary>Gets cell value with given offset from the top-left of this area. "#N/A" if given offset out of this area; Otherwise return the cell value at given position.</summary>
+      <param name="row_offset">row offset from the start row of this area</param>
+      <param name="col_offset">column offset from the start row of this area</param>
+      <returns>"#REF!" if this area is invalid;</returns>
+    </member>
+    <member name="P:GridReferredArea.is_external_link">
+      <summary>Indicates whether this is an external link.</summary>
+    </member>
+    <member name="P:GridReferredArea.external_file_name">
+      <summary>Get the external file name if this is an external reference.</summary>
+    </member>
+    <member name="P:GridReferredArea.sheet_name">
+      <summary>Indicates which sheet this is in</summary>
+    </member>
+    <member name="P:GridReferredArea.is_area">
+      <summary>Indicates whether this is an area.</summary>
+    </member>
+    <member name="P:GridReferredArea.end_column">
+      <summary>The end column of the area.</summary>
+    </member>
+    <member name="P:GridReferredArea.start_column">
+      <summary>The start column of the area.</summary>
+    </member>
+    <member name="P:GridReferredArea.end_row">
+      <summary>The end row of the area.</summary>
+    </member>
+    <member name="P:GridReferredArea.start_row">
+      <summary>The start row of the area.</summary>
+    </member>
+    <member name="T:GridUpdateMonitor">
+      <summary>Monitor for user to track the change of update operation.</summary>
+    </member>
+    <member name="M:GridUpdateMonitor.after_update(str,str,List[Any])">
+      <summary>after update operation</summary>
+      <param name="op">The JSON string for update operation</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="cells">The Updated Cells list,include cells which has style change,value change or formula change</param>
+    </member>
+    <member name="T:GridWarningInfo">
+      <summary>Represents warning information for GridJs.</summary>
+    </member>
+    <member name="M:GridWarningInfo.__init__()">
+      <summary>GridWarningInfo __init__.</summary>
+    </member>
+    <member name="P:GridWarningInfo.type">
+      <summary>Gets the warning type.</summary>
+    </member>
+    <member name="P:GridWarningInfo.description">
+      <summary>Gets the warning description.</summary>
+    </member>
+    <member name="P:GridWarningInfo.corrected_object">
+      <summary>Gets the corrected object.</summary>
+    </member>
+    <member name="P:GridWarningInfo.error_object">
+      <summary>Gets the error object.</summary>
+    </member>
+    <member name="T:GridWorkbookSettings">
+      <summary>Represents the settings of the workbook.</summary>
+    </member>
+    <member name="M:GridWorkbookSettings.__init__()">
+      <summary>GridWorkbookSettings __init__.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.max_iteration">
+      <summary>Returns the maximum number of iterations to resolve a circular reference, the default value is 100.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.iteration">
+      <summary>Indicates whether use iteration to resolve circular references.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.force_full_calculate">
+      <summary>Indicates whether fully calculates every time when a calculation is triggered.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.create_calc_chain">
+      <summary>Indicates whether create calculated formulas chain. Default is false.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.re_calculate_on_open">
+      <summary>Indicates whether re-calculate all formulas on opening file. Default is true.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.precision_as_displayed">
+      <summary>True if calculations in this workbook will be done using only the precision of the numbers as they\'re displayed</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.date1904">
+      <summary>Gets a value which represents if the workbook uses the 1904 date system.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.enable_macros">
+      <summary>Enable macros; Now it only works when copying a worksheet to other worksheet in a workbook.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.check_custom_number_format">
+      <summary>Indicates whether checking custom number format when setting Style.Custom, default is false.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.check_excel_restriction">
+      <summary>Whether check restriction of excel file when user modify cells related objects. For example, excel does not allow inputting string value longer than 32K. When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception. If this property is false, we will accept your input string value as the cell\'s value so that later you can output the complete string value for other file formats such as CSV. However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file. default is false.</summary>
+    </member>
+    <member name="P:GridWorkbookSettings.author">
+      <summary>Gets/sets the author of the file.</summary>
+    </member>
+    <member name="T:IGridJsService">
+      <summary>Reprensents the basic operation apis interface used in controller actions.</summary>
+    </member>
+    <member name="M:IGridJsService.update_cell(str,str)">
+      <summary>Applies the update operation.</summary>
+      <param name="p">The JSON format string of update operation.</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The JSON format string of the update result.</returns>
+    </member>
+    <member name="M:IGridJsService.check_in_cache_for_collaborative(str)">
+      <summary>Check wether workbook instance is in memory cache .this method is apply for Collaborative mode only.</summary>
+      <returns>Returns bool.</returns>
+    </member>
+    <member name="M:IGridJsService.detail_stream_json_with_uid(io._IOBase,str,str)">
+      <summary>Write the JSON string for the file to the stream by the specified unique id.</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="file_path">The file path</param>
+      <param name="uid">The unique id for the file cache.</param>
+    </member>
+    <member name="M:IGridJsService.detail_stream_json(io._IOBase,str)">
+      <summary>Write the JSON string for the Workbook to the stream</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="file_path">The file path</param>
+    </member>
+    <member name="M:IGridJsService.lazy_loading_stream_json(io._IOBase,str,str)">
+      <summary>Writes the JSON string of the specified sheet in the file from the cache using the specified unique id to the stream..</summary>
+      <param name="stream">The stream that will be written</param>
+      <param name="sheet_name">The sheet name.</param>
+      <param name="uid">The unique id for the file cache.</param>
+    </member>
+    <member name="M:IGridJsService.add_image(str,str,str,io._IOBase)">
+      <summary>Applies the add image from local file operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="iscontrol">Specify whether it is a control.</param>
+      <param name="file_input_stream">The input stream form file of the image</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:IGridJsService.add_image_by_url(str,str,str)">
+      <summary>Applies the add image from remote URL operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="imageurl">Specify the image URL.</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:IGridJsService.copy_image(str,str)">
+      <summary>Applies the copy image operation.</summary>
+      <param name="p">The JSON string parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The JSON string result</returns>
+    </member>
+    <member name="M:IGridJsService.load(str,str)">
+      <summary>Gets the JSON string of the file from the cache using the specified unique id,set the output filename in the JSON.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">Specifies the file name in the JSON. If set to null,the default filename is: book1.</param>
+      <returns>The JSON string</returns>
+    </member>
+    <member name="M:IGridJsService.image(str,str)">
+      <summary>Get Stream of image.</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="picid">The image id.</param>
+      <returns>The image stream</returns>
+    </member>
+    <member name="M:IGridJsService.ole(str,str,int,List[str])">
+      <summary>Gets the byte array data of the embedded ole object .</summary>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="sheetname">The worksheet name.</param>
+      <param name="oleid">The  id for the embedded ole object.</param>
+      <param name="label">The display label of the embedded ole object.</param>
+      <returns>The byte array data of the  embedded ole object .</returns>
+    </member>
+    <member name="M:IGridJsService.image_url(str,str,str)">
+      <summary>Gets the image URL.</summary>
+      <param name="base_url">The base action URL.</param>
+      <param name="picid">The image id.</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <returns>The image URL</returns>
+    </member>
+    <member name="M:IGridJsService.get_file(str)">
+      <summary>Get file stream</summary>
+      <param name="fileid">the file id</param>
+      <returns>The stream of the file</returns>
+    </member>
+    <member name="M:IGridJsService.download(str,str,str)">
+      <summary>Applies the download file operation</summary>
+      <param name="p">The JSON parameter</param>
+      <param name="uid">The unique id for the file cache.</param>
+      <param name="filename">The file name</param>
+      <returns>The file URL</returns>
+    </member>
+    <member name="M:IGridJsService.get_warning_callback()">
+      <summary>Gets custom warning callback for import file.</summary>
+      <returns>The warning callback</returns>
+    </member>
+    <member name="M:IGridJsService.set_warning_callback(IWarningCallback)">
+      <summary>Sets custom warning callback for import file.</summary>
+      <param name="callback">The warning callback</param>
+    </member>
+    <member name="T:ITextTranslator">
+      <summary>Represents the interface for translate</summary>
+    </member>
+    <member name="T:IWarningCallback">
+      <summary>Public warning callback interface for GridJs. Use this interface instead of Aspose.Cells.IWarningCallback which is internal under PYTHONVIANET.</summary>
+    </member>
+    <member name="M:IWarningCallback.warning(GridWarningInfo)">
+      <summary>Called when a warning occurs.</summary>
+      <param name="warning_info">The warning information.</param>
+    </member>
+    <member name="T:OprMessageService">
+      <summary>This class provide all the operations for messages sync in Collaborative mode .</summary>
+    </member>
+    <member name="M:OprMessageService.__init__()">
+      <summary>OprMessageService __init__.</summary>
+    </member>
+    <member name="T:PdfSaveOptions">
+      <summary>Represents the options for saving pdf file.</summary>
+    </member>
+    <member name="M:PdfSaveOptions.__init__()">
+      <summary>Creates the options for saving pdf file.</summary>
+    </member>
+    <member name="M:PdfSaveOptions.set_sheet_set(List[int])">
+      <summary>Creates a sheet set based on exact sheet indexes.</summary>
+      <param name="sheet_indexes">zero based sheet indexes.</param>
+    </member>
+    <member name="M:PdfSaveOptions.set_image_resample(int,int)">
+      <summary>Sets desired PPI(pixels per inch) of resample images and jpeg quality. All images will be converted to JPEG with the specified quality setting, and images that are greater than the specified PPI (pixels per inch) will be resampled.</summary>
+      <param name="desired_ppi">Desired pixels per inch. 220 high quality. 150 screen quality. 96 email quality.</param>
+      <param name="jpeg_quality">0 - 100% JPEG quality.</param>
+    </member>
+    <member name="P:PdfSaveOptions.font_encoding">
+      <summary>Gets embedded font encoding in pdf.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.display_doc_title">
+      <summary>Indicates whether the window\'s title bar should display the document title.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.export_document_structure">
+      <summary>Indicates whether to export document structure.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.custom_properties_export">
+      <summary>Gets a value determining the way of custom document properties are exported to PDF file. Default value is None.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.optimization_type">
+      <summary>Gets and sets pdf optimization type.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.producer">
+      <summary>Gets and sets producer of generated pdf document.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.created_time">
+      <summary>Gets and sets the time of generating the pdf document.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.pdf_compression">
+      <summary>Indicate the compression algorithm</summary>
+    </member>
+    <member name="P:PdfSaveOptions.calculate_formula">
+      <summary>Indicates whether to calculate formulas before saving pdf file.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.security_options">
+      <summary>Set this options, when security is need in xls2pdf result.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.compliance">
+      <summary>Gets the PDF standards compliance level for output documents.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.embed_standard_windows_fonts">
+      <summary>True to embed true type fonts. Affects only ASCII characters 32-127. Fonts for character codes greater than 127 are always embedded. Fonts are always embedded for PDF/A-1a, PDF/A-1b standard. Default is true.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.embed_attachments">
+      <summary>Indicates whether to embed attachment for Ole objects in Excel.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.default_edit_language">
+      <summary>Gets default edit language.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.text_cross_type">
+      <summary>Gets displaying text type when the text width is larger than cell width.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.gridline_color">
+      <summary>Gets gridline colr.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.gridline_type">
+      <summary>Gets gridline type.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.printing_page_type">
+      <summary>Indicates which pages will not be printed.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.emf_render_setting">
+      <summary>Setting for rendering Emf metafile.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.page_count">
+      <summary>Gets the number of pages to save.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.page_index">
+      <summary>Gets the 0-based index of the first page to save.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.ignore_error">
+      <summary>Indicates if you need to hide the error while rendering. The error can be error in shape, image, chart rendering, etc.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.output_blank_page_when_nothing_to_print">
+      <summary>Indicates whether to output a blank page when there is nothing to print.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.default_font">
+      <summary>When characters in the Excel are Unicode and not be set with correct font in cell style, They may appear as block in pdf,image. Set the DefaultFont such as MingLiu or MS Gothic to show these characters. If this property is not set, Aspose.Cells will use system default font to show these unicode characters.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.check_workbook_default_font">
+      <summary>When characters in the Excel are Unicode and not be set with correct font in cell style, They may appear as block in pdf,image. Set this to true to try to use workbook\'s default font to show these characters first.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.check_font_compatibility">
+      <summary>Indicates whether to check font compatibility for every character in text.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.is_font_substitution_char_granularity">
+      <summary>Indicates whether to only substitute the font of character when the cell font is not compatibility for it.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.one_page_per_sheet">
+      <summary>If OnePagePerSheet is true , all content of one sheet will output to only one page in result. The paper size of pagesetup will be invalid, and the other settings of pagesetup will still take effect.</summary>
+    </member>
+    <member name="P:PdfSaveOptions.all_columns_in_one_page_per_sheet">
+      <summary>If AllColumnsInOnePagePerSheet is true , all column content of one sheet will output to only one page in result. The width of paper size of pagesetup will be ignored, and the other settings of pagesetup will still take effect.</summary>
+    </member>
+    <member name="T:PdfSecurityOptions">
+      <summary>Options for encrypting and access permissions for a PDF document. PDF/A does not allow security setting.</summary>
+    </member>
+    <member name="M:PdfSecurityOptions.__init__()">
+      <summary>The constructor of PdfSecurityOptions</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.user_password">
+      <summary>Gets the user password required for opening the encrypted PDF document.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.owner_password">
+      <summary>Gets the owner password for the encrypted PDF document.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.print_permission">
+      <summary>Indicates whether to allow to print the document.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.modify_document_permission">
+      <summary>Indicates whether to allow to modify the contents of the document by operations other than those controlled by :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.annotations_permission`, :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.fill_forms_permission` and :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.assemble_document_permission`.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.annotations_permission">
+      <summary>Indicates whether to allow to add or modify text annotations, fill in interactive form fields.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.fill_forms_permission">
+      <summary>Indicates whether to allow to fill in existing interactive form fields (including signature fields), even if :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.modify_document_permission` is clear.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.extract_content_permission">
+      <summary>Indicates whether to allow to copy or otherwise extract text and graphics from the document by operations other than that controlled by :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.accessibility_extract_content`.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.accessibility_extract_content">
+      <summary>Indicates whether to allow to extract text and graphics (in support of accessibility to users with disabilities or for other purposes).</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.assemble_document_permission">
+      <summary>Indicates whether to allow to assemble the document (insert, rotate, or delete pages and create bookmarks or thumbnail images), even if :py:attr:`aspose.cellsgridjs.PdfSecurityOptions.modify_document_permission` is clear.</summary>
+    </member>
+    <member name="P:PdfSecurityOptions.full_quality_print_permission">
+      <summary>Indicates whether to allow to print the document to a representation from which a faithful digital copy of the PDF content could be generated.</summary>
+    </member>
+    <member name="T:SheetSet">
+      <summary>Describes a set of sheets.</summary>
+    </member>
+    <member name="M:SheetSet.__init__(List[int])">
+      <summary>Creates a sheet set based on exact sheet indexes.</summary>
+      <param name="sheet_indexes">zero based sheet indexes.</param>
+    </member>
+    <member name="T:CoWorkOperationType">
+      <summary>Represents the CoWorkOperationType enumeration.</summary>
+    </member>
+    <member name="F:CoWorkOperationType.VIEW">
+      <summary>View operation (read-only)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.LOAD">
+      <summary>Load operation (read-only)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.LOAD_SHEET">
+      <summary>Load sheet operation (read-only)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.GET_IMAGE">
+      <summary>Get image operation (read-only)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.GET_OLE">
+      <summary>Get OLE object operation (read-only)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.EDIT">
+      <summary>Edit operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.UPDATE_CELL">
+      <summary>Update cell operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.ADD_IMAGE">
+      <summary>Add image operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.COPY_IMAGE">
+      <summary>Copy image operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.INSERT_ROW">
+      <summary>Insert row operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.DELETE_ROW">
+      <summary>Delete row operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.INSERT_COLUMN">
+      <summary>Insert column operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.DELETE_COLUMN">
+      <summary>Delete column operation (editable)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.DOWNLOAD">
+      <summary>Download operation</summary>
+    </member>
+    <member name="F:CoWorkOperationType.ADMIN_CONFIG">
+      <summary>Admin configuration operation (administrative)</summary>
+    </member>
+    <member name="F:CoWorkOperationType.USER_MANAGEMENT">
+      <summary>User management operation (administrative)</summary>
+    </member>
+    <member name="T:CoWorkUserPermission">
+      <summary>Represents the CoWorkUserPermission enumeration.</summary>
+    </member>
+    <member name="F:CoWorkUserPermission.READ_ONLY">
+      <summary>Read-only permission,User can only view the content but cannot make any modifications</summary>
+    </member>
+    <member name="F:CoWorkUserPermission.EDITABLE">
+      <summary>Editable permission,User can view and edit the content</summary>
+    </member>
+    <member name="F:CoWorkUserPermission.DOWNLOAD">
+      <summary>Download permission,User can view,edit and download the content to local storage</summary>
+    </member>
+    <member name="F:CoWorkUserPermission.ADMIN">
+      <summary>Administrator permission,User has full access including management operations</summary>
+    </member>
+    <member name="T:DefaultEditLanguage">
+      <summary>Represents the DefaultEditLanguage enumeration.</summary>
+    </member>
+    <member name="F:DefaultEditLanguage.AUTO">
+      <summary>Represents auto detecting edit language according to the text itself.</summary>
+    </member>
+    <member name="F:DefaultEditLanguage.ENGLISH">
+      <summary>Represents English language.</summary>
+    </member>
+    <member name="F:DefaultEditLanguage.CJK">
+      <summary>Represents Chinese, Japanese, Korean language.</summary>
+    </member>
+    <member name="T:EmfRenderSetting">
+      <summary>Represents the EmfRenderSetting enumeration.</summary>
+    </member>
+    <member name="F:EmfRenderSetting.EMF_ONLY">
+      <summary>Only rendering Emf records.</summary>
+    </member>
+    <member name="F:EmfRenderSetting.EMF_PLUS_PREFER">
+      <summary>Prefer rendering EmfPlus records.</summary>
+    </member>
+    <member name="T:GridExceptionType">
+      <summary>Represents the GridExceptionType enumeration.</summary>
+    </member>
+    <member name="F:GridExceptionType.CHART">
+      <summary>Invalid chart setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.DATA_TYPE">
+      <summary>Invalid data type setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.DATA_VALIDATION">
+      <summary>Invalid data validation setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.CONDITIONAL_FORMATTING">
+      <summary>Invalid data validation setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.FILE_FORMAT">
+      <summary>Invalid file format.</summary>
+    </member>
+    <member name="F:GridExceptionType.FORMULA">
+      <summary>Invalid formula.</summary>
+    </member>
+    <member name="F:GridExceptionType.INVALID_DATA">
+      <summary>Invalid data.</summary>
+    </member>
+    <member name="F:GridExceptionType.INVALID_OPERATOR">
+      <summary>Invalid operator.</summary>
+    </member>
+    <member name="F:GridExceptionType.INCORRECT_PASSWORD">
+      <summary>Incorrect password.</summary>
+    </member>
+    <member name="F:GridExceptionType.LICENSE">
+      <summary>License related errors.</summary>
+    </member>
+    <member name="F:GridExceptionType.LIMITATION">
+      <summary>Out of MS Excel limitation error.</summary>
+    </member>
+    <member name="F:GridExceptionType.PAGE_SETUP">
+      <summary>Invalid page setup setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.PIVOT_TABLE">
+      <summary>Invalid pivotTable setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.SHAPE">
+      <summary>Invalid drawing object setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.SPARKLINE">
+      <summary>Invalid sparkline object setting.</summary>
+    </member>
+    <member name="F:GridExceptionType.SHEET_NAME">
+      <summary>Invalid worksheet name.</summary>
+    </member>
+    <member name="F:GridExceptionType.SHEET_TYPE">
+      <summary>Invalid worksheet type.</summary>
+    </member>
+    <member name="F:GridExceptionType.INTERRUPTED">
+      <summary>The process is interrupted.</summary>
+    </member>
+    <member name="F:GridExceptionType.IO">
+      <summary>The file is invalid.</summary>
+    </member>
+    <member name="F:GridExceptionType.PERMISSION">
+      <summary>Permission is required to open this file.</summary>
+    </member>
+    <member name="F:GridExceptionType.UNSUPPORTED_FEATURE">
+      <summary>Unsupported feature.</summary>
+    </member>
+    <member name="F:GridExceptionType.UNSUPPORTED_STREAM">
+      <summary>Unsupported stream to be opened.</summary>
+    </member>
+    <member name="F:GridExceptionType.UNDISCLOSED_INFORMATION">
+      <summary>Files contains some undisclosed information.</summary>
+    </member>
+    <member name="T:GridJsLogLevel">
+      <summary>Represents the GridJsLogLevel enumeration.</summary>
+    </member>
+    <member name="F:GridJsLogLevel.DEBUG">
+      <summary>Debug level, outputs all messages.</summary>
+    </member>
+    <member name="F:GridJsLogLevel.INFO">
+      <summary>Info level.</summary>
+    </member>
+    <member name="F:GridJsLogLevel.WARN">
+      <summary>Warning level.</summary>
+    </member>
+    <member name="F:GridJsLogLevel.ERROR">
+      <summary>Error level.</summary>
+    </member>
+    <member name="F:GridJsLogLevel.NONE">
+      <summary>Disables all logging.</summary>
+    </member>
+    <member name="T:GridJsLogRolling">
+      <summary>Represents the GridJsLogRolling enumeration.</summary>
+    </member>
+    <member name="F:GridJsLogRolling.NONE">
+      <summary>No rolling, single file.</summary>
+    </member>
+    <member name="F:GridJsLogRolling.DAILY">
+      <summary>Roll by day, e.g. gridjs_2026-07-27.log</summary>
+    </member>
+    <member name="F:GridJsLogRolling.MONTHLY">
+      <summary>Roll by month, e.g. gridjs_2026-07.log</summary>
+    </member>
+    <member name="T:GridLoadFormat">
+      <summary>Represents the GridLoadFormat enumeration.</summary>
+    </member>
+    <member name="F:GridLoadFormat.AUTO">
+      <summary>Represents recognizing the format automatically.</summary>
+    </member>
+    <member name="F:GridLoadFormat.CSV">
+      <summary>Comma-Separated Values(CSV) text file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.XLSX">
+      <summary>Represents Office Open XML spreadsheetML workbook or template, with or without macros.</summary>
+    </member>
+    <member name="F:GridLoadFormat.TSV">
+      <summary>Tab-Separated Values(TSV) text file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.TAB_DELIMITED">
+      <summary>Represents a tab delimited text file, same with :py:attr:`aspose.cellsgridjs.GridLoadFormat.TSV`.</summary>
+    </member>
+    <member name="F:GridLoadFormat.HTML">
+      <summary>Represents a html file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.M_HTML">
+      <summary>Represents a mhtml file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.ODS">
+      <summary>Open Document Sheet(ODS) file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.EXCEL_97_TO_2003">
+      <summary>Represents an Excel97-2003 xls file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.SPREADSHEET_ML">
+      <summary>Represents an Excel 2003 xml file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.XLSB">
+      <summary>Represents an xlsb file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.OTS">
+      <summary>Open Document Template Sheet(OTS) file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.NUMBERS">
+      <summary>Represents a numbers file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.FODS">
+      <summary>Represents OpenDocument Flat XML Spreadsheet (.fods) file format.</summary>
+    </member>
+    <member name="F:GridLoadFormat.SXC">
+      <summary>Represents StarOffice Calc Spreadsheet (.sxc) file format.</summary>
+    </member>
+    <member name="F:GridLoadFormat.XML">
+      <summary>Represents a simple xml file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.EPUB">
+      <summary>Reprents an EPUB file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.AZW3">
+      <summary>Represents an AZW3 file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.CHM">
+      <summary>Represents a CHM file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.MARKDOWN">
+      <summary>Represents a Markdown file.</summary>
+    </member>
+    <member name="F:GridLoadFormat.UNKNOWN">
+      <summary>Represents unrecognized format, cannot be loaded.</summary>
+    </member>
+    <member name="F:GridLoadFormat.IMAGE">
+      <summary>Image</summary>
+    </member>
+    <member name="F:GridLoadFormat.JSON">
+      <summary>Json</summary>
+    </member>
+    <member name="F:GridLoadFormat.DIF">
+      <summary>Data Interchange Format.</summary>
+    </member>
+    <member name="F:GridLoadFormat.DBF">
+      <summary>Xbase Data file</summary>
+    </member>
+    <member name="T:GridWarningType">
+      <summary>Represents the GridWarningType enumeration.</summary>
+    </member>
+    <member name="F:GridWarningType.CHART">
+      <summary>Invalid chart setting.</summary>
+    </member>
+    <member name="F:GridWarningType.DATA_TYPE">
+      <summary>Invalid data type setting.</summary>
+    </member>
+    <member name="F:GridWarningType.DATA_VALIDATION">
+      <summary>Invalid data validation setting.</summary>
+    </member>
+    <member name="F:GridWarningType.CONDITIONAL_FORMATTING">
+      <summary>Invalid conditional formatting setting.</summary>
+    </member>
+    <member name="F:GridWarningType.FILE_FORMAT">
+      <summary>Invalid file format.</summary>
+    </member>
+    <member name="F:GridWarningType.FORMULA">
+      <summary>Invalid formula.</summary>
+    </member>
+    <member name="F:GridWarningType.INVALID_DATA">
+      <summary>Invalid data.</summary>
+    </member>
+    <member name="F:GridWarningType.INVALID_OPERATOR">
+      <summary>Invalid operator.</summary>
+    </member>
+    <member name="F:GridWarningType.INCORRECT_PASSWORD">
+      <summary>Incorrect password.</summary>
+    </member>
+    <member name="F:GridWarningType.LICENSE">
+      <summary>License related errors.</summary>
+    </member>
+    <member name="F:GridWarningType.LIMITATION">
+      <summary>Out of MS Excel limitation error.</summary>
+    </member>
+    <member name="F:GridWarningType.PAGE_SETUP">
+      <summary>Invalid page setup setting.</summary>
+    </member>
+    <member name="F:GridWarningType.PIVOT_TABLE">
+      <summary>Invalid pivotTable setting.</summary>
+    </member>
+    <member name="F:GridWarningType.SHAPE">
+      <summary>Invalid drawing object setting.</summary>
+    </member>
+    <member name="F:GridWarningType.SPARKLINE">
+      <summary>Invalid sparkline object setting.</summary>
+    </member>
+    <member name="F:GridWarningType.SHEET_NAME">
+      <summary>Invalid worksheet name.</summary>
+    </member>
+    <member name="F:GridWarningType.SHEET_TYPE">
+      <summary>Invalid worksheet type.</summary>
+    </member>
+    <member name="F:GridWarningType.INTERRUPTED">
+      <summary>The process is interrupted.</summary>
+    </member>
+    <member name="F:GridWarningType.IO">
+      <summary>The file is invalid.</summary>
+    </member>
+    <member name="F:GridWarningType.PERMISSION">
+      <summary>Permission is required to open this file.</summary>
+    </member>
+    <member name="F:GridWarningType.UNSUPPORTED_FEATURE">
+      <summary>Unsupported feature.</summary>
+    </member>
+    <member name="F:GridWarningType.UNSUPPORTED_STREAM">
+      <summary>Unsupported stream to be opened.</summary>
+    </member>
+    <member name="F:GridWarningType.UNDISCLOSED_INFORMATION">
+      <summary>Files contains some undisclosed information.</summary>
+    </member>
+    <member name="F:GridWarningType.FILE_CORRUPTED">
+      <summary>File content is corrupted.</summary>
+    </member>
+    <member name="F:GridWarningType.DEFINED_NAME">
+      <summary>Invalid defined name.</summary>
+    </member>
+    <member name="F:GridWarningType.FONT">
+      <summary>Invalid font.</summary>
+    </member>
+    <member name="F:GridWarningType.AUTO_FILTER">
+      <summary>Invalid auto filter setting.</summary>
+    </member>
+    <member name="F:GridWarningType.FONT_SUBSTITUTION">
+      <summary>Font substitution warning type.</summary>
+    </member>
+    <member name="T:GridlineType">
+      <summary>Enumerates grid line Type.</summary>
+    </member>
+    <member name="F:GridlineType.DOTTED">
+      <summary>Represents dotted line.</summary>
+    </member>
+    <member name="F:GridlineType.HAIR">
+      <summary>Represents hair line.</summary>
+    </member>
+    <member name="T:PdfCompliance">
+      <summary>Represents the PdfCompliance enumeration.</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF14">
+      <summary>Pdf format compatible with PDF 1.4</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF15">
+      <summary>Pdf format compatible with PDF 1.5</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF16">
+      <summary>Pdf format compatible with PDF 1.6</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF17">
+      <summary>Pdf format compatible with PDF 1.7</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A1B">
+      <summary>Pdf format compatible with PDF/A-1b(ISO 19005-1)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A1A">
+      <summary>Pdf format compatible with PDF/A-1a(ISO 19005-1)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A2B">
+      <summary>Pdf format compatible with PDF/A-2b(ISO 19005-2)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A2U">
+      <summary>Pdf format compatible with PDF/A-2u(ISO 19005-2)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A2A">
+      <summary>Pdf format compatible with PDF/A-2a(ISO 19005-2)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A3B">
+      <summary>Pdf format compatible with PDF/A-3b(ISO 19005-3)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A3U">
+      <summary>Pdf format compatible with PDF/A-3u(ISO 19005-3)</summary>
+    </member>
+    <member name="F:PdfCompliance.PDF_A3A">
+      <summary>Pdf format compatible with PDF/A-3a(ISO 19005-3)</summary>
+    </member>
+    <member name="T:PdfCompressionCore">
+      <summary>Represents the PdfCompressionCore enumeration.</summary>
+    </member>
+    <member name="F:PdfCompressionCore.NONE">
+      <summary>None</summary>
+    </member>
+    <member name="F:PdfCompressionCore.RLE">
+      <summary>Rle</summary>
+    </member>
+    <member name="F:PdfCompressionCore.LZW">
+      <summary>Lzw</summary>
+    </member>
+    <member name="F:PdfCompressionCore.FLATE">
+      <summary>Flate</summary>
+    </member>
+    <member name="T:PdfCustomPropertiesExport">
+      <summary>Represents the PdfCustomPropertiesExport enumeration.</summary>
+    </member>
+    <member name="F:PdfCustomPropertiesExport.NONE">
+      <summary>No custom properties are exported.</summary>
+    </member>
+    <member name="F:PdfCustomPropertiesExport.STANDARD">
+      <summary>Custom properties are exported as entries in Info dictionary.</summary>
+    </member>
+    <member name="T:PdfFontEncoding">
+      <summary>Represents the PdfFontEncoding enumeration.</summary>
+    </member>
+    <member name="F:PdfFontEncoding.IDENTITY">
+      <summary>Represents use Identity-H encoding for all embedded fonts in pdf.</summary>
+    </member>
+    <member name="F:PdfFontEncoding.ANSI_PREFER">
+      <summary>Represents prefer to use WinAnsiEncoding for TrueType fonts with characters 32-127, otherwise, Identity-H encoding will be used for embedded fonts in pdf.</summary>
+    </member>
+    <member name="T:PdfOptimizationType">
+      <summary>Represents the PdfOptimizationType enumeration.</summary>
+    </member>
+    <member name="F:PdfOptimizationType.STANDARD">
+      <summary>High print quality</summary>
+    </member>
+    <member name="F:PdfOptimizationType.MINIMUM_SIZE">
+      <summary>File size is more important than print quality</summary>
+    </member>
+    <member name="T:PrintingPageType">
+      <summary>Represents the PrintingPageType enumeration.</summary>
+    </member>
+    <member name="F:PrintingPageType.DEFAULT">
+      <summary>Prints all pages.</summary>
+    </member>
+    <member name="F:PrintingPageType.IGNORE_BLANK">
+      <summary>Don\'t print the pages which the cells are blank.</summary>
+    </member>
+    <member name="F:PrintingPageType.IGNORE_STYLE">
+      <summary>Don\'t print the pages which cells only contain styles.</summary>
+    </member>
+    <member name="T:TextCrossType">
+      <summary>Enumerates displaying text type when the text width is larger than cell width.</summary>
+    </member>
+    <member name="F:TextCrossType.DEFAULT">
+      <summary>Display text like in Microsoft Excel.</summary>
+    </member>
+    <member name="F:TextCrossType.CROSS_KEEP">
+      <summary>Display all the text by crossing other cells and keep text of crossed cells.</summary>
+    </member>
+    <member name="F:TextCrossType.CROSS_OVERRIDE">
+      <summary>Display all the text by crossing other cells and override text of crossed cells.</summary>
+    </member>
+    <member name="F:TextCrossType.STRICT_IN_CELL">
+      <summary>Only display the text within the width of cell.</summary>
+    </member>
+  </members>
+</doc>
