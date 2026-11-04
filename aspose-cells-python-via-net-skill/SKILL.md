@@ -94,7 +94,7 @@ workbook.save("output.xlsx", gc.SaveFormat.XLSX)
 
 ## Version assumptions
 
-Written for **Aspose.Cells for Python via .NET 26.7.0** (the `aspose-cells-python` wheel) on
+Written for **Aspose.Cells for Python via .NET 26.10.0** (the `aspose-cells-python` wheel) on
 Python 3.8+. Every class, enum, and submodule name shown in SKILL.md and `references/` was
 checked by introspection against that exact package, and the most error-prone method calls
 (such as `License.set_license`, `Cells.import_array`, `Cell.put_value`, `Workbook.calculate_formula`,

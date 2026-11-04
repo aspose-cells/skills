@@ -60,7 +60,7 @@ using (FileStream fs = new FileStream("Aspose.Cells.lic", FileMode.Open, FileAcc
 
 ## Verifying the license loaded
 
-`Workbook.IsLicensed` is `false` before a license is applied and `true` after a successful `SetLicense` - assert it in a smoke test. A missing license file makes `SetLicense` throw `FileNotFoundException` ("Cannot find license"); a corrupt or modified file throws `IOException` ("Corrupted License file.") - verified against 26.7.0. Do not swallow either.
+`Workbook.IsLicensed` is `false` before a license is applied and `true` after a successful `SetLicense` - assert it in a smoke test. A missing license file makes `SetLicense` throw `FileNotFoundException` ("Cannot find license"); a corrupt or modified file throws `IOException` ("Corrupted License file.") - verified against 26.10.0. Do not swallow either.
 
 ```csharp
 Aspose.Cells.License license = new Aspose.Cells.License();
