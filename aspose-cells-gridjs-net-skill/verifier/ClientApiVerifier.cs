@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.RegularExpressions;
 
 // ---------------------------------------------------------------------------
@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 //   - Property names exist on the referenced type
 //   - Event names are declared in event type aliases
 //
-// Exit code: 0 = all checks passed, 1 = at least one NOT FOUND.
+// Exit code: 0 = all checks passed, 1 = at least one NOT FOUND, 2 = could not run.
 // ---------------------------------------------------------------------------
 
 internal static class ClientApiVerifier
@@ -34,7 +34,7 @@ internal static class ClientApiVerifier
         if (skillRoot == null)
         {
             Console.Error.WriteLine("Could not locate skill root (folder with SKILL.md and references/).");
-            return 1;
+            return 2;
         }
 
         // Find index.d.ts
@@ -42,7 +42,7 @@ internal static class ClientApiVerifier
         if (!File.Exists(dtsPath))
         {
             Console.Error.WriteLine($"Client API declaration file not found: {dtsPath}");
-            return 1;
+            return 2;
         }
 
         Console.WriteLine($"Client API declarations: {dtsPath}");
@@ -83,8 +83,8 @@ internal static class ClientApiVerifier
             if (File.Exists(Path.Combine(dir.FullName, "SKILL.md")) &&
                 Directory.Exists(Path.Combine(dir.FullName, "references")))
                 return dir.FullName;
-            // Pattern 2: skill-index.md with .md files (template-generated layout)
-            if (File.Exists(Path.Combine(dir.FullName, "skill-index.md")))
+            // Pattern 2: SKILL.md with .md files (Agent Skills standard layout)
+            if (File.Exists(Path.Combine(dir.FullName, "SKILL.md")))
                 return dir.FullName;
             dir = dir.Parent;
         }
