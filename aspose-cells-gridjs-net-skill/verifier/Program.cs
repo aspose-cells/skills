@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -11,7 +11,10 @@ using System.Text.RegularExpressions;
 //   --client   Validate client-side API references against index.d.ts
 //   --names    Name-level cross-check: every API name in skill must exist in assembly
 //
-// Exit code: 0 = all checks passed, 1 = at least one issue found.
+// Exit codes: 0 = all checks passed, 1 = at least one issue found,
+//              2 = the verifier itself could not run (missing skill root or API doc,
+//              or an unexpected failure). 2 must never be read as a finding: the skill
+//              was not examined at all.
 // ---------------------------------------------------------------------------
 
 internal static class Program
@@ -23,17 +26,26 @@ internal static class Program
         bool names = args.Contains("--names");
         string? explicitRoot = args.FirstOrDefault(a => !a.StartsWith("--"));
 
-        if (compile)
-            return CompileVerifier.Run(explicitRoot);
+        try
+        {
+            if (compile)
+                return CompileVerifier.Run(explicitRoot);
 
-        if (client)
-            return ClientApiVerifier.Run(explicitRoot);
+            if (client)
+                return ClientApiVerifier.Run(explicitRoot);
 
-        if (names)
-            return NameVerifier.Run(explicitRoot);
+            if (names)
+                return NameVerifier.Run(explicitRoot);
 
-        // Default: reflection scan of server-side API
-        return RunReflectionScan(explicitRoot);
+            // Default: reflection scan of server-side API
+            return RunReflectionScan(explicitRoot);
+        }
+        catch (Exception ex)
+        {
+            // A crash is a broken toolchain, not evidence about the documentation.
+            Console.Error.WriteLine($"Verifier could not run: {ex.GetType().Name}: {ex.Message}");
+            return 2;
+        }
     }
 
     // -----------------------------------------------------------------------
@@ -60,32 +72,53 @@ internal static class Program
     private static int _skipped;
     private static int _constructors;
     private static readonly List<string> SkipSamples = new();
-    private static readonly int MaxSkipSamples = 40;
+    private const int MaxSkipSamples = 40;
+
+    // A chain this scan cannot resolve is coverage it did not get, not a pass. Keep a bounded
+    // sample so the reader can tell "nothing left to check" from "the scan gave up here".
+    private static void NoteSkip(string file, int line, string detail)
+    {
+        if (SkipSamples.Count < MaxSkipSamples)
+            SkipSamples.Add($"{file}:L{line}  {detail}");
+    }
 
     private static int RunReflectionScan(string? explicitRoot)
     {
-        string? skillRoot = explicitRoot ?? FindSkillRoot(AppContext.BaseDirectory);
+        string? skillRoot = explicitRoot is null
+            ? FindSkillRoot(AppContext.BaseDirectory)
+            : Path.GetFullPath(explicitRoot);
         if (skillRoot == null)
         {
             Console.Error.WriteLine("Could not locate skill root (folder with SKILL.md and references/).");
-            return 1;
+            return 2;
         }
 
-        Console.WriteLine($"GridJs assembly version: {GridJsAssembly.GetName().Version}");
+        var assemblyVersion = GridJsAssembly.GetName().Version;
+        Console.WriteLine($"GridJs assembly version: {assemblyVersion.Major}.{assemblyVersion.Minor}.{assemblyVersion.Build}");
         Console.WriteLine($"Scanning: {skillRoot}");
         Console.WriteLine(new string('-', 60));
 
+        // The example project is generated consumer code, not skill documentation, and the
+        // verifier directory holds this tool's own sources - neither is a claim about the API.
         var files = Directory.GetFiles(skillRoot, "*.md", SearchOption.AllDirectories)
+            .Where(f =>
+            {
+                var rel = Path.GetRelativePath(skillRoot, f).Replace('\\', '/');
+                return !rel.StartsWith("example") && !rel.StartsWith("verifier") && !rel.StartsWith("report");
+            })
             .OrderBy(f => f)
             .ToArray();
 
         foreach (string file in files)
         {
-            CheckFile(file);
+            CheckFile(file, skillRoot);
         }
 
         Console.WriteLine(new string('-', 60));
         Console.WriteLine($"OK: {_ok}   NOT FOUND: {_notFound}   SKIPPED: {_skipped}   CTOR-CHECKED: {_constructors}");
+        // Machine-readable result line for the caller: a non-zero exit code alone cannot tell
+        // a finding apart from a tool that died half way through.
+        Console.WriteLine($"VERIFIER-RESULT: ok={_ok} not-found={_notFound} skipped={_skipped} ctor-checked={_constructors}");
         if (SkipSamples.Count > 0)
         {
             Console.WriteLine(new string('-', 60));
@@ -104,35 +137,58 @@ internal static class Program
             if (File.Exists(Path.Combine(dir.FullName, "SKILL.md")) &&
                 Directory.Exists(Path.Combine(dir.FullName, "references")))
                 return dir.FullName;
-            // Pattern 2: skill-index.md with .md files (template-generated layout)
-            if (File.Exists(Path.Combine(dir.FullName, "skill-index.md")))
+            // Pattern 2: SKILL.md with .md files (Agent Skills standard layout)
+            if (File.Exists(Path.Combine(dir.FullName, "SKILL.md")))
                 return dir.FullName;
             dir = dir.Parent;
         }
         return null;
     }
 
-    private static void CheckFile(string file)
+    private static void CheckFile(string file, string skillRoot)
     {
-        string rel = Path.GetRelativePath(Path.GetDirectoryName(Path.GetDirectoryName(file)) ?? ".", file);
+        string rel = Path.GetRelativePath(skillRoot, file).Replace('\\', '/');
         string[] lines = File.ReadAllLines(file);
 
         bool inCode = false;
+        bool isCsharp = false;
         var env = new Dictionary<string, Type?>();
         for (int i = 0; i < lines.Length; i++)
         {
             string line = lines[i];
             if (line.TrimStart().StartsWith("```"))
             {
-                inCode = !inCode;
-                if (!inCode) env.Clear();
+                if (!inCode)
+                {
+                    isCsharp = IsCsharpFence(line.TrimStart());
+                    inCode = true;
+                }
+                else
+                {
+                    inCode = false;
+                    isCsharp = false;
+                    env.Clear();
+                }
                 continue;
             }
-            if (!inCode) continue;
+            if (!inCode || !isCsharp) continue;
 
             string san = Sanitize(line);
             ScanLine(san, rel, i + 1, env, isTopLevel: true);
         }
+    }
+
+    /// <summary>
+    /// An unlabelled fence is treated as C# because that is what this skill is written in,
+    /// but a fence that names another language is that language's code - a ```javascript
+    /// Math.random() is not a claim about the .NET assembly and must not be judged as one.
+    /// </summary>
+    private static bool IsCsharpFence(string trimmedOpener)
+    {
+        var m = Regex.Match(trimmedOpener, @"^```\s*(?<lang>[A-Za-z+#-]+)?");
+        if (!m.Success) return false;
+        string lang = m.Groups["lang"].Value;
+        return lang.Length == 0 || lang.ToLowerInvariant() is "csharp" or "cs";
     }
 
     private static string Sanitize(string line)
@@ -211,7 +267,7 @@ internal static class Program
                                         Report(file, lineNo, $"new {tname}({argCount} args) - no matching constructor on {t.FullName}");
                                     ScanLine(inner, file, lineNo, env, false);
                                 }
-                                else { _skipped++; }
+                                else { NoteSkip(file, lineNo, $"new {tname}(...) - type not in the GridJs assembly"); _skipped++; }
                                 if (closeP < n) i = closeP + 1;
                                 continue;
                             }
@@ -352,7 +408,7 @@ internal static class Program
             }
         }
         if (cur == null) cur = ResolveRoot(parts[0].name, env);
-        if (cur == null) { _skipped++; return; }
+        if (cur == null) { NoteSkip(file, lineNo, string.Join(".", parts.Select(p => p.name)) + " - receiver type is not a GridJs type"); _skipped++; return; }
         if (startIdx == 0) startIdx = 1;
 
         for (int i = startIdx; i < parts.Count && cur != null; i++)
@@ -433,7 +489,7 @@ internal static class Program
     {
         string typeName = parts[0].name;
         Type? t = FindTypeByName(typeName);
-        if (t == null) { _skipped++; return; }
+        if (t == null) { NoteSkip(file, lineNo, typeName + " { ... } - type not in the GridJs assembly"); _skipped++; return; }
         foreach (Match pm in Regex.Matches(inner, @"(?<prop>[A-Za-z_][A-Za-z0-9_]*)\s*="))
         {
             string prop = pm.Groups["prop"].Value;
