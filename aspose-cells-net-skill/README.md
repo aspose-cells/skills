@@ -6,7 +6,7 @@ edit, convert, or render spreadsheets (xlsx, xls, xlsm, csv, tsv, ods, and
 spreadsheet-to-PDF/HTML/image).
 
 Every snippet and inline API reference is verified by reflection against the
-pinned `Aspose.Cells` 26.10.0 package, so a stale or misspelled API is caught by
+pinned `Aspose.Cells` 26.11.0 package, so a stale or misspelled API is caught by
 the verifier, not by whatever user runs the skill.
 
 ## Repository layout
@@ -49,7 +49,7 @@ to the right reference file.
    and reads `SKILL.md` first (its frontmatter `name`/`description` drive when
    the skill is triggered — e.g. whenever an `Aspose.Cells` task appears).
 2. **Check version.** `SKILL.md` → `## Version assumptions` pins **Aspose.Cells
-   26.10.0**. If the user's project uses a different version, the agent re-runs
+   26.11.0**. If the user's project uses a different version, the agent re-runs
    the verifiers (below) before trusting any snippet.
 3. **Route to a reference.** When a task maps to one of the 17 golden rules or
    a row of the `When to read which reference` table, read that

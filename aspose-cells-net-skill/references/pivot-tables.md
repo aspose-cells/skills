@@ -123,6 +123,35 @@ data0.DisplayName = "Total Sales";
 `Max`, `Min`, `Product`, `StdDev`, `StdDevp`, `Var`, `Varp` (`DistinctCount` needs Excel
 2013+).
 
+## Show Values As
+
+`PivotField.ShowValuesAs` changes how PivotTable data field values are displayed, such as running totals, percentages of totals, differences from a base item, and rankings.
+
+```csharp
+PivotTable pt = new Workbook("data.xlsx").Worksheets[0].PivotTables[0];
+PivotField data0 = pt.DataFields[0];
+
+// Percentage of column total
+data0.ShowValuesAs(PivotShowValuesAsType.PercentageOfColumn, 0, 0);
+
+// Running total using the previous item
+data0.ShowValuesAs(PivotShowValuesAsType.RunningTotalIn,
+    0, PivotShowValuesSetting.PreviousPivotItem);
+
+// Difference from the previous month
+data0.ShowValuesAs(PivotShowValuesAsType.DifferenceFrom, "Month", "(previous)");
+```
+
+`PivotShowValuesAsType` supports: `Normal`, `DifferenceFrom`, `PercentageOf`, `PercentageDifferenceFrom`, `RunningTotalIn`, `PercentageOfRow`, `PercentageOfColumn`, `PercentageOfTotal`, `Index`, `PercentageOfParentRowTotal`, `PercentageOfParentColumnTotal`, `PercentageOfParentTotal`, `PercentageOfRunningTotalIn`, `RankSmallestToLargest`, and `RankLargestToSmallest`.
+
+`DifferenceFrom`, `PercentageOf`, and `PercentageDifferenceFrom` require a base field and base item. `RunningTotalIn`, `PercentageOfParentTotal`, `PercentageOfRunningTotalIn`, and both `Rank*` types require a base field.
+
+The `int` overload accepts a base field index and a zero-based base item index. Use `PivotShowValuesSetting.PreviousPivotItem` (`-1`) or `NextPivotItem` (`-2`) to reference the previous or next item.
+
+The `string` overload accepts the base field name and base item caption. Use `"(previous)"`, `"(next)"`, or `null` when the calculation does not require a base item.
+
+Only data fields support this API.
+
 ## Page filter, grand totals, style, empty-cell text
 
 ```csharp

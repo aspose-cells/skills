@@ -84,7 +84,7 @@ COPY --from=build /app /app
 ENTRYPOINT ["python", "app.py"]
 ```
 
-`requirements.txt` should pin the wheel, e.g. `aspose-cells-python==26.10.0`. Alpine delta: use `python:3.11-alpine` and replace the apt line with `RUN apk add --no-cache fontconfig`. As an apt alternative to copying `.ttf` files, install a font package (e.g. `fonts-liberation`).
+`requirements.txt` should pin the wheel, e.g. `aspose-cells-python==26.11.0`. Alpine delta: use `python:3.11-alpine` and replace the apt line with `RUN apk add --no-cache fontconfig`. As an apt alternative to copying `.ttf` files, install a font package (e.g. `fonts-liberation`).
 
 ## macOS
 

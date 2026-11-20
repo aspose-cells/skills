@@ -87,7 +87,7 @@ workbook.Save("output.xlsx", SaveFormat.Xlsx);
 
 ## Version assumptions
 
-Written for **Aspose.Cells for .NET 26.10.0** on .NET 8+, and every API shown in
+Written for **Aspose.Cells for .NET 26.11.0** on .NET 8+, and every API shown in
 SKILL.md and `references/` is verified by reflection against that exact package (see
 "Verifying the docs" below). Graphics: `System.Drawing.Common` on Windows-targeted
 builds; SkiaSharp on cross-platform .NET 6+ builds since 22.10.1. API surface follows
