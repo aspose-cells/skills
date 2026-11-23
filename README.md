@@ -14,9 +14,9 @@ A collection of self-verifying SKILLs for working with Aspose.Cells in coding ag
 
 | Skill | Description |
 |-------|-------------|
-| [aspose-cells-gridjs-java-skill](aspose-cells-gridjs-java-skill/) | Java — build web-based spreadsheets with the Aspose.Cells.GridJs component (server/client APIs, events, configuration) |
-| [aspose-cells-gridjs-net-skill](aspose-cells-gridjs-net-skill/) | C#/.NET — Aspose.Cells.GridJs web spreadsheet component, server/client APIs and configuration |
-| [aspose-cells-gridjs-python-via-net-skill](aspose-cells-gridjs-python-via-net-skill/) | Python via .NET — Aspose.Cells.GridJs web spreadsheet component, server/client APIs and configuration |
+| [aspose-cells-gridjs-java-skill](aspose-cells-gridjs-java-skill/) | Java — build web-based spreadsheets with the Aspose.Cells.GridJs component for Java|
+| [aspose-cells-gridjs-net-skill](aspose-cells-gridjs-net-skill/) | C#/.NET — build web-based spreadsheets with the Aspose.Cells.GridJs component for .NET|
+| [aspose-cells-gridjs-python-via-net-skill](aspose-cells-gridjs-python-via-net-skill/) | Python via .NET  — build web-based spreadsheets with the Aspose.Cells.GridJs component for Python|
 
 ## About SKILLs
 
