@@ -2,7 +2,7 @@
 
 A collection of self-verifying SKILLs for working with Aspose.Cells in coding agents.
 
-## Available Skills
+## Cells Skills -Basic SDK
 
 | Skill | Description |
 |-------|-------------|
@@ -10,7 +10,7 @@ A collection of self-verifying SKILLs for working with Aspose.Cells in coding ag
 | [aspose-cells-net-skill](aspose-cells-net-skill/) | C#/.NET — create, read, edit, convert, and render spreadsheets |
 | [aspose-cells-python-via-net-skill](aspose-cells-python-via-net-skill/) | Python via .NET — same capabilities with the `aspose-cells-python` package |
 
-### GridJs Skills
+### GridJs Skills  -UI Component
 
 | Skill | Description |
 |-------|-------------|
