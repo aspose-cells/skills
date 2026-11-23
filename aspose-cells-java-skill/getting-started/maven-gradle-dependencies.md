@@ -52,13 +52,18 @@ and for ODS encrypt / decrypt.
 ```xml
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcprov-jdk18on</artifactId>
-    <version>1.78</version>
+    <artifactId>bcprov-jdk15to18</artifactId>
+    <version>1.86</version>
 </dependency>
 <dependency>
     <groupId>org.bouncycastle</groupId>
-    <artifactId>bcpkix-jdk18on</artifactId>
-    <version>1.78</version>
+    <artifactId>bcpkix-jdk15to18</artifactId>
+    <version>1.86</version>
+</dependency>
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcutil-jdk15to18</artifactId>
+    <version>1.86</version>
 </dependency>
 ```
 
