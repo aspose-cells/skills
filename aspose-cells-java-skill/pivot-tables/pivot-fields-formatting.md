@@ -18,8 +18,7 @@ import com.aspose.cells.*;
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 
 pt.addFieldToArea(PivotFieldType.PAGE,   1);    // report filter
 pt.addFieldToArea(PivotFieldType.ROW,    0);    // rows
@@ -32,8 +31,7 @@ pt.addFieldToArea(PivotFieldType.DATA,   3);    // values
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 pt.addFieldToArea(PivotFieldType.DATA, 2);
 
 PivotField data = pt.getDataFields().get(0);
@@ -55,8 +53,7 @@ data.setNumberFormat("#,##0.00");
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 pt.addFieldToArea(PivotFieldType.ROW, 0);
 
 pt.setShowRowGrandTotals(true);
@@ -72,13 +69,11 @@ region.setSubtotals(PivotFieldSubtotalType.COUNT, false);
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 pt.addFieldToArea(PivotFieldType.ROW, 0);
 
 PivotField year = pt.getRowFields().get(0);
-year.setAutoSortField(0);                                 // by the field itself
-year.setAscendSort(true);
+year.sortBy(SortOrder.ASCENDING, 0, null);                // by data field #0
 
 year.getPivotItems().get(0).setHidden(true);             // hide the 1st item (e.g., 2019)
 year.getPivotItems().get(1).setHidden(true);             // hide the 2nd item (e.g., 2020)
@@ -94,15 +89,16 @@ shortest form.
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 pt.addFieldToArea(PivotFieldType.ROW, 0);
 
 PivotField field = pt.getRowFields().get(0);
-field.setAutoShow(true);                // enable top-N filter
-field.setAutoShowCount(10);              // show the top 10
-field.setAutoShowField(0);              // rank by this field
+field.top10AutoShow(true, true, 10, 0); // autoShow, top (not bottom), count, rank by field #0
 ```
+
+`field.getTop10AutoShowSettings()` exposes the same knobs
+(`setAutoShow`, `setTop`, `setAutoShowCount`, `setRankBy`) for
+incremental changes.
 
 ## Conditional formatting pivot values
 
@@ -110,8 +106,7 @@ field.setAutoShowField(0);              // rank by this field
 import static com.aspose.cells.Color.fromArgb;
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 
 ConditionalFormattingCollection cfc = ws.getConditionalFormattings();
 int cIdx = cfc.add();
@@ -132,8 +127,10 @@ prelude's `java.awt.Color`.
 - **A field placed in `DATA` becomes a numeric field by default**;
   text columns get `Count` automatically. Set the function explicitly
   to avoid confusion.
-- **`setAutoSortField` index is 0-based within the data area** —
-  different from the source range.
+- **`sortBy(...)` field index is 0-based within the data area** —
+  different from the source range. `setAutoSortField` /
+  `setAscendSort` / `setAutoShow*` are deprecated; use `sortBy(...)`,
+  `getSortSetting()`, `top10AutoShow(...)`.
 - **`setSubtotals` is additive** — pass each subtotal type
   individually; passing one type leaves others untouched.
 - **`addFieldToArea` over a `DATA` field changes the consolidation
@@ -143,3 +140,4 @@ prelude's `java.awt.Color`.
 
 - [create-pivot-table.md](create-pivot-table.md)
 - [refresh-pivot-table.md](refresh-pivot-table.md)
+- [group-pivot-fields.md](group-pivot-fields.md)

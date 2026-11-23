@@ -48,6 +48,21 @@ opts.setDefaultFont("Arial");                   // font used when a sheet font i
 wb.save("out.pdf", opts);
 ```
 
+## Match Excel's cell text limit
+
+To reproduce Excel's own output behaviour — only the first 1024
+characters of a non-wrapped cell — set the rendering behavior:
+
+```java
+Workbook wb = new Workbook("input.xlsx");
+PdfSaveOptions opts = new PdfSaveOptions();
+opts.setRenderingBehavior(ExcelRenderingBehavior.CELL_TEXT_LENGTH_LIMIT);
+wb.save("out.pdf", opts);
+```
+
+`ExcelRenderingBehavior.ALL` applies every supported Excel-specific
+rendering behavior; `NONE` applies none.
+
 ## Bookmarks (PDF outline)
 
 ```java

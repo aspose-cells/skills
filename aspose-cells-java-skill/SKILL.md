@@ -95,6 +95,7 @@ folder only. Do **not** dump every sub-skill into context.
 | Create pivot table                | `pivot-tables/create-pivot-table.md`                       |
 | Pivot field / value configuration | `pivot-tables/pivot-fields-formatting.md`                  |
 | Refresh pivot cache / data        | `pivot-tables/refresh-pivot-table.md`                      |
+| Group pivot field (dates, ranges) | `pivot-tables/group-pivot-fields.md`                       |
 | Convert workbook → PDF            | `rendering/convert-to-pdf.md`                              |
 | Worksheet → PNG / JPEG / TIFF     | `rendering/worksheet-image.md`                             |
 | Convert → HTML                    | `rendering/convert-html.md`                                |
@@ -124,7 +125,7 @@ correction proactively; do not wait for the user to discover them.
 - **`workbook.save("file.pdf")` ignores options** → use `PdfSaveOptions`.
 - **`refreshData()` on pivot** → deprecated; use
   `workbook.refreshAll()` / `worksheet.refreshPivotTables()` /
-  `pivotTable.getPivotCache().refresh()` (since v25.x).
+  `pivotTable.refresh()` (since v25.x).
 - **`cell.Value` / `cell.get_Value`** → use JavaBean `getValue()` /
   `setValue(...)` only.
 - **CSV export missing sheets** → only active sheet is exported; set
@@ -139,8 +140,8 @@ correction proactively; do not wait for the user to discover them.
 - **Chart image / PDF is blank** → render before `chart.calculate()`.
   For pivot-bound charts, `refreshPivotData()` first.
 - **Pivot body is empty after source edits** → recompute with
-  `pt.calculateData(new PivotTableCalculateOption().setRefreshData(true))`,
-  not the obsolete `refreshData(); calculateData();` pair.
+  `pt.refresh()`, not the obsolete `refreshData(); calculateData();`
+  pair.
 - **Circular formulas compute to 0** → iterative calculation is off
   by default; enable with
   `wb.getSettings().getFormulaSettings().setEnableIterativeCalculation(true)`,

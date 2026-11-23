@@ -294,6 +294,18 @@ computed values. Set `setCalculateFormula(true)` on the designer, or
 call `workbook.calculateFormula()` afterward, before reading computed
 cell values.
 
+## Header / footer markers
+
+`&=` markers also work inside the page header and footer — enable
+processing before `process()`:
+
+```java
+Workbook book = new Workbook();
+WorkbookDesigner designer = new WorkbookDesigner(book);
+designer.setEnableHeaderFooterMarkers(true);   // otherwise they stay literal
+designer.process();
+```
+
 ## After `process()`
 
 Computed values need calculation before you read or convert them;

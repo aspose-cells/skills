@@ -37,6 +37,20 @@ tb.setPlacement(PlacementType.FREE_FLOATING);     // move freely, not anchored
 Shape rect = ws.getShapes().addShape(MsoDrawingType.RECTANGLE, 0, 0, 0, 0, 200, 50);
 ```
 
+## Find a shape by its text
+
+```java
+FindOptions find = new FindOptions();
+int idx = ws.getShapes().find("Confidential", 0, find);   // search from index 0
+if (idx != -1) {
+    Shape s = ws.getShapes().get(idx);                    // -1 = no match
+}
+```
+
+Returns the shape's index, or `-1` when nothing matches. Pass the
+previous hit's index as the second argument to continue searching —
+same protocol as `Cells.find`.
+
 ## OLE object
 
 ```java

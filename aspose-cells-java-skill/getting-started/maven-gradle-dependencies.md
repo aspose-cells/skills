@@ -24,7 +24,7 @@ Aspose.Cells for Java is published to the official Aspose repository
     <dependency>
         <groupId>com.aspose</groupId>
         <artifactId>aspose-cells</artifactId>
-        <version>26.8</version>
+        <version>26.11</version>
     </dependency>
 </dependencies>
 ```
@@ -40,7 +40,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.aspose:aspose-cells:26.8'
+    implementation 'com.aspose:aspose-cells:26.11'
 }
 ```
 

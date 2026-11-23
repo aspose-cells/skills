@@ -1,14 +1,14 @@
 ---
 name: refresh-pivot-table
-description: Refresh pivot tables in Aspose.Cells for Java — workbook.refreshAll / worksheet.refreshPivotTables / pivotTable.refreshData / pivotTable.calculateData, layered refresh strategy, deferred cache, and how to tell which method to use.
+description: Refresh pivot tables in Aspose.Cells for Java — workbook.refreshAll / worksheet.refreshPivotTables / pivotTable.refresh / pivotTable.calculateData, layered refresh strategy, deferred cache, and how to tell which method to use.
 applies_to: Java
 keywords: [refresh, refreshAll, refreshPivotTables, pivot cache, refreshData, deprecated]
 ---
 
 # Refresh a pivot table
 
-`pivotTable.getPivotCache().refresh()` re-reads the source range every
-call; for routine recomputes after in-memory edits prefer
+`pivotTable.refresh()` re-reads the source range and recalculates the
+view in one call; for routine recomputes after in-memory edits prefer
 `calculateData()`. Use the layered refresh API for the appropriate
 scope:
 
@@ -16,9 +16,12 @@ scope:
 | ---------------------------------------- | --------------------------------- |
 | Refresh everything (workbook)            | `workbook.refreshAll()`           |
 | Refresh all pivots on a sheet            | `worksheet.refreshPivotTables()`  |
-| Refresh one pivot's cache                | `pivotTable.getPivotCache().refresh()` |
+| Refresh one pivot (cache + view)         | `pivotTable.refresh()`            |
+| … with options                           | `pivotTable.refresh(opt)` with a `PivotTableRefreshOption` |
 | Recompute aggregates from current cache  | `pivotTable.calculateData()`      |
-| Rebuild cache + recompute in one call    | `pivotTable.calculateData(opt)` where `opt.setRefreshData(true)` |
+
+`pivotTable.refreshData()` is deprecated — `refresh()` replaces it
+(and also makes a following `calculateData()` unnecessary).
 
 ## Imports
 
@@ -48,26 +51,26 @@ ws.refreshPivotTables();
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3");
 
-pt.getPivotCache().refresh();                // recomputes aggregates; faster
-                                             // than reloading the source
+pt.refresh();                                // rebuilds the cache from the
+                                             // source, then recomputes the view
 ```
 
-Use `pt.getPivotCache().refresh()` only after you replaced the
-source range or changed its contents from outside the workbook
-(e.g. an SQL query).
+Use `pt.refresh()` only after you replaced the source range or changed
+its contents from outside the workbook (e.g. an SQL query). Every
+pivot table sharing the same cache is recalculated too.
 
 ## Pitfalls
 
-- **Use `pt.getPivotCache().refresh()` only for source swaps.** Routine edits
-  followed by `refresh()` re-reads the entire source — slow.
+- **Use `pt.refresh()` only for source swaps.** Routine edits followed
+  by `refresh()` re-read the entire source — slow.
 - **Cached pivot source range** — `pt.getSource()` may be a
   different snapshot than the current `changeDataSource(...)` value;
   update it if the source range moved.
 - **External (DB / OLAP) sources** cannot be refreshed by
-  `pivotTable.getPivotCache().refresh()`. Use the connection's own refresh.
+  `pt.refresh()` (it returns `PivotRefreshState.UNSUPPORTED_EXTERNAL_DATA_SOURCE`).
+  Use the connection's own refresh.
 - **Refresh after editing values, before saving.** Otherwise the
   saved file ships stale aggregates.
 
@@ -87,10 +90,7 @@ Fix, in order:
 1. If the source cells are formula-driven, call
    `wb.calculateFormula()` first so the source values are current.
 2. Rebuild the cache from the source AND recompute the view in one
-   call: `pt.calculateData(new PivotTableCalculateOption())` with
-   `setRefreshData(true)`. Equivalent to the longer
-   `pt.getPivotCache().refresh(); pt.calculateData();` pair, but in
-   one call.
+   call: `pt.refresh()`.
 3. Do this before `save()` and before reading any pivot output cell.
 
 ```java
@@ -101,17 +101,15 @@ PivotTable pt = wb.getWorksheets().get(0).getPivotTables().get(0);
 wb.calculateFormula();
 
 // 2. rebuild cache from current source + recompute, in one call
-PivotTableCalculateOption opt = new PivotTableCalculateOption();
-opt.setRefreshData(true);
-pt.calculateData(opt);                       // returns PivotTable[] (dependents)
+pt.refresh();                                // returns PivotRefreshState
 
 wb.save("report.xlsx");
 ```
 
-`pt.calculateData()` with no option recomputes only from the
-**existing** cache. That is fine immediately after `add(...)` (the
-cache was just built), but it will NOT pick up later edits to the
-source cells — those need `setRefreshData(true)`.
+`pt.calculateData()` recomputes only from the **existing** cache. That
+is fine immediately after `add(...)` (the cache was just built), but it
+will NOT pick up later edits to the source cells — those need
+`pt.refresh()`.
 
 ### Pivot body cells read as null before calculation
 
@@ -121,7 +119,7 @@ even though the pivot looks set up.
 Cause: pivot output cells are ordinary cells only *after* the body
 is computed.
 
-Fix: call `calculateData(...)` (see above), then read via the
+Fix: call `pt.refresh()` (see above), then read via the
 pivot's ranges. `DataBodyRange` is the values region;
 `TableRange1` is the whole report excluding page fields;
 `TableRange2` includes page fields. All expose `CellArea` with
@@ -130,9 +128,7 @@ pivot's ranges. `DataBodyRange` is the values region;
 ```java
 Workbook wb = new Workbook("report.xlsx");
 PivotTable pt = wb.getWorksheets().get(0).getPivotTables().get(0);
-PivotTableCalculateOption opt = new PivotTableCalculateOption();
-opt.setRefreshData(true);
-pt.calculateData(opt);                       // body cells are null before this
+pt.refresh();                                // body cells are null before this
 
 com.aspose.cells.CellArea body = pt.getDataBodyRange();   // values region
 Object v = wb.getWorksheets().get(0).getCells().get(body.StartRow, body.StartColumn).getValue();
@@ -154,3 +150,4 @@ runs `calculateData(...)`.
 
 - [create-pivot-table.md](create-pivot-table.md)
 - [pivot-fields-formatting.md](pivot-fields-formatting.md)
+- [group-pivot-fields.md](group-pivot-fields.md)

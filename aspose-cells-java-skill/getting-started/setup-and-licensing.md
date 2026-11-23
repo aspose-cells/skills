@@ -33,7 +33,7 @@ the `.lic` next to the JAR or on the classpath.
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cells</artifactId>
-    <version>26.8</version>
+    <version>26.11</version>
 </dependency>
 ```
 
@@ -155,7 +155,7 @@ new License().setLicense("/etc/aspose/Aspose.Cells.Java.lic");
 A missing license file makes `setLicense` throw a
 `FileNotFoundException` ("Cannot find license"); a corrupt or
 modified file throws an `Exception` ("Corrupted License file.")
-— verified against 26.7. Do not swallow either. Always assert
+— verified against 26.11. Do not swallow either. Always assert
 `isLicensed()` after construction as a smoke test.
 
 ```java

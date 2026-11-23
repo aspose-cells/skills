@@ -33,8 +33,9 @@ source.getCells().get("C5").setValue(2200);
 
 // 2) Pivot on a *different* sheet (recommended)
 Worksheet piv = wb.getWorksheets().add("Summary");
-int idx = piv.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = piv.getPivotTables().get(idx);
+PivotTableCreateOptions opts = new PivotTableCreateOptions();
+opts.setTableName("MyPivot");
+PivotTable pt = piv.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", opts);
 
 // 3) Layout
 pt.addFieldToArea(PivotFieldType.ROW, 0);     // Region
@@ -52,8 +53,9 @@ wb.save("pivot.xlsx");
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTableCreateOptions opts = new PivotTableCreateOptions();
+opts.setTableName("MyPivot");
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", opts);
 
 PivotFieldCollection fields = pt.getRowFields();
 fields.addByBaseIndex(0);                  // first source column
@@ -69,8 +71,9 @@ valueField.setNumberFormat("0.00");
 ```java
 Workbook wb = new Workbook();
 Worksheet ws = wb.getWorksheets().add("Summary");
-int pIdx = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", "MyPivot");
-PivotTable pt = ws.getPivotTables().get(pIdx);
+PivotTableCreateOptions opts = new PivotTableCreateOptions();
+opts.setTableName("MyPivot");
+PivotTable pt = ws.getPivotTables().add("=Sheet1!$A$1:$C$5", "A3", opts);
 
 // Anchor the chart to the right of the pivot body (use row 2, col E)
 int chartIdx = ws.getCharts().add(ChartType.BAR, 2, 5, 22, 20);
@@ -83,6 +86,10 @@ body.
 
 ## Pitfalls
 
+- **The `int`-returning `add(...)` overloads (`add(src, dest, "Name")`,
+  …) are deprecated** — they build a legacy Excel 97-2003 pivot. Use
+  `add(src, dest)` or `add(src, dest, PivotTableCreateOptions)`; both
+  return the `PivotTable` directly.
 - **Source must be top-left → bottom-right**. `"C5:A1"` throws.
 - **First call to `addFieldToArea` registers the field, subsequent
   calls for the same field are no-ops** — use `pt.setDataFields`
@@ -100,3 +107,4 @@ body.
 
 - [pivot-fields-formatting.md](pivot-fields-formatting.md)
 - [refresh-pivot-table.md](refresh-pivot-table.md)
+- [group-pivot-fields.md](group-pivot-fields.md)

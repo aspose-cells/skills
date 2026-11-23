@@ -52,7 +52,8 @@
     "pivot-tables": [
       "create-pivot-table",
       "pivot-fields-formatting",
-      "refresh-pivot-table"
+      "refresh-pivot-table",
+      "group-pivot-fields"
     ],
     "rendering": [
       "convert-to-pdf",
