@@ -10,6 +10,14 @@ A collection of self-verifying SKILLs for working with Aspose.Cells in coding ag
 | [aspose-cells-net-skill](aspose-cells-net-skill/) | C#/.NET — create, read, edit, convert, and render spreadsheets |
 | [aspose-cells-python-via-net-skill](aspose-cells-python-via-net-skill/) | Python via .NET — same capabilities with the `aspose-cells-python` package |
 
+### GridJs Skills
+
+| Skill | Description |
+|-------|-------------|
+| [aspose-cells-gridjs-java-skill](aspose-cells-gridjs-java-skill/) | Java — build web-based spreadsheets with the Aspose.Cells.GridJs component (server/client APIs, events, configuration) |
+| [aspose-cells-gridjs-net-skill](aspose-cells-gridjs-net-skill/) | C#/.NET — Aspose.Cells.GridJs web spreadsheet component, server/client APIs and configuration |
+| [aspose-cells-gridjs-python-via-net-skill](aspose-cells-gridjs-python-via-net-skill/) | Python via .NET — Aspose.Cells.GridJs web spreadsheet component, server/client APIs and configuration |
+
 ## About SKILLs
 
 Each skill is a documentation package designed for coding agents (opencode, Claude Code, etc.). The agent reads the docs and routes to the right reference file when a task appears. Every code snippet is verified against the pinned Aspose.Cells package to ensure accuracy.
