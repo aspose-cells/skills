@@ -1,4 +1,8 @@
-﻿# GridJs Skill Index
+---
+name: aspose-cells-gridjs-python-via-net-skill
+description: "Aspose.Cells.GridJs skill for Python: server and client API reference, setup guide, configuration reference and working code examples. Use when building, integrating or debugging applications that embed the Aspose.Cells.GridJs spreadsheet component."
+---
+# GridJs Skill Index
 
 **Language**: Python
 **Product**: Aspose.Cells.GridJs
